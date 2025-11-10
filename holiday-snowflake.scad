@@ -9,9 +9,11 @@ $fn=16;
 
 PHI = (1 + sqrt(5)) / 2; // =~ 1.618
 
-diameter = 200;
-radius = diameter / 2;
 branch_thickness = 12;
+// shrinking overall diameter to account for diamond shapes added at tips
+base_diameter = 200;
+diameter = base_diameter - (branch_thickness * 1.2 * sqrt(2) * 1.5);
+radius = diameter / 2;
 secondary_branch_1_offset = radius*0.525;
 secondary_branch_1_length = radius/3;
 
@@ -36,7 +38,7 @@ module led_with_halo(
     halo_d    = halo_diameter,
     halo_w    = halo_width
 ){
-    up(1) {
+    up(0) {
         // LED body (centered rectangle)
         if (show_leds) color(led_col) rect(size);
 
@@ -48,7 +50,8 @@ module led_with_halo(
 
 // the central hexagon of the snowflake
 module central_hexagon(diameter) {
-    regular_ngon(6, diameter);
+    if(show_board)
+        regular_ngon(6, diameter);
     rot_copies(n=6)
         right(diameter - branch_thickness/PHI) led_with_halo();
 }
@@ -56,8 +59,10 @@ module central_hexagon(diameter) {
 module primary_branch(
     length,
 ){
-    rect([length, branch_thickness], anchor=LEFT);
-    right(length) xscale(1.5) rect(branch_thickness*1.2, spin=45, rounding=1);
+    if(show_board) {
+        rect([length, branch_thickness], anchor=LEFT);
+        right(length) xscale(1.5) rect(branch_thickness*1.2, spin=45, rounding=1);
+    }
     right(length) led_with_halo();
 }
 
@@ -66,9 +71,10 @@ module secondary_branch(
     length,
     led=true,
 ){
-    for(ang=[60,-60])
-        right(offset)
-            rect([length, branch_thickness], chamfer=chamfer,spin=ang, anchor=LEFT);
+    if(show_board)
+        for(ang=[60,-60])
+            right(offset)
+                rect([length, branch_thickness], chamfer=[chamfer,0,0,chamfer],spin=ang, anchor=LEFT);
     if (led)
         for(ang=[60,-60])
             right(offset)
@@ -77,9 +83,20 @@ module secondary_branch(
                         led_with_halo();
 }
 
-central_hexagon(middle_diameter);
-rot_copies(n=6) {
-    primary_branch(radius);
-    secondary_branch(secondary_branch_1_offset, secondary_branch_1_length);
-    secondary_branch(secondary_branch_2_offset, secondary_branch_2_length, led=false);
+// When importing the LEDs into KiCAD (for easier alignment), the scale is somehow different from the snowflake.
+// Adding these markings in the corners so both exports have the same bounding box.
+for(x=[base_diameter / -2, base_diameter / 2]) {
+    for(y=[base_diameter / -2, base_diameter / 2]) {
+        left(x) back(y) rect(0.2);
+    }
+}
+// Rotated so it has vertical primary branches.
+// This will make it easier to address the LEDs starting with the "North" branch.
+zrot(90) {
+    central_hexagon(middle_diameter);
+    rot_copies(n=6) {
+        primary_branch(radius);
+        secondary_branch(secondary_branch_1_offset, secondary_branch_1_length);
+        secondary_branch(secondary_branch_2_offset, secondary_branch_2_length, led=false);
+    }
 }
