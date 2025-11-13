@@ -1743,6 +1743,132 @@
 			)
 		)
 	)
+	(footprint "MountingHole:ToolingHole_1.152mm"
+		(layer "F.Cu")
+		(uuid "2e44b6b1-ed9d-4d2d-bae2-41523a17c45a")
+		(at 91.110273 184 -60)
+		(descr "Tooling Hole 1.152mm, 1.3mm solder mask, JLCPCB specification, https://jlcpcb.com/help/article/How-to-add-tooling-holes-for-PCB-assembly-order")
+		(tags "mounting")
+		(property "Reference" "REF**9"
+			(at 0 -1.5 120)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "a4ceb389-157a-452e-9945-ab09736df68c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "ToolingHole_1.152mm"
+			(at 0 1.6 120)
+			(layer "F.Fab")
+			(uuid "454f9979-0daf-4282-820f-b010f3d51088")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 300)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ed104c0f-54bf-49aa-9d1c-f63dc4dd2002")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 300)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c8baaac5-8529-46de-9a4e-62e16a5771bd")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 0.7 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "a85eac75-ab8d-4719-9137-4b1d2734c251")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 120)
+			(layer "F.Fab")
+			(uuid "42c08dbd-b86c-4e11-8c1b-a9eb14ec08f7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" np_thru_hole circle
+			(at 0 0 300)
+			(size 1.152 1.152)
+			(drill 1.152)
+			(layers "*.Cu" "*.Mask")
+			(solder_mask_margin 0.074)
+			(uuid "021487f7-cc1c-4e4c-b9fe-40ea93384589")
+		)
+		(zone
+			(net 0)
+			(net_name "")
+			(layers "F.Cu" "B.Cu")
+			(uuid "b03d50e2-76b0-4ff8-bf22-02c7d630e88d")
+			(hatch edge 0.5)
+			(connect_pads
+				(clearance 0)
+			)
+			(min_thickness 0.25)
+			(filled_areas_thickness no)
+			(keepout
+				(tracks not_allowed)
+				(vias allowed)
+				(pads allowed)
+				(copperpour not_allowed)
+				(footprints not_allowed)
+			)
+			(placement
+				(enabled no)
+				(sheetname "")
+			)
+			(fill
+				(thermal_gap 0.5)
+				(thermal_bridge_width 0.5)
+			)
+			(polygon
+				(pts
+					(xy 91.460273 184.606218) (xy 91.59518 184.504841) (xy 91.701906 184.374126) (xy 91.774249 184.221668)
+					(xy 91.808003 184.056326) (xy 91.801208 183.887712) (xy 91.754259 183.725624) (xy 91.669883 183.57948)
+					(xy 91.552985 183.457777) (xy 91.410358 183.367585) (xy 91.250291 183.314146) (xy 91.082087 183.300568)
+					(xy 90.915521 183.327638) (xy 90.760273 183.393782) (xy 90.625366 183.495159) (xy 90.51864 183.625874)
+					(xy 90.446297 183.778332) (xy 90.412543 183.943674) (xy 90.419338 184.112288) (xy 90.466287 184.274376)
+					(xy 90.550663 184.42052) (xy 90.667561 184.542223) (xy 90.810188 184.632415) (xy 90.970255 184.685854)
+					(xy 91.138459 184.699432) (xy 91.305025 184.672362)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
 	(footprint "easyeda2kicad:LED-SMD_4P-L5.0-W5.0-TL_WS2812B-B"
 		(layer "F.Cu")
 		(uuid "3d15bf6d-59aa-4dc0-aeab-6259e59d6f5b")
@@ -1994,6 +2120,132 @@
 			)
 		)
 	)
+	(footprint "MountingHole:ToolingHole_1.152mm"
+		(layer "F.Cu")
+		(uuid "40b6d027-e9e2-42ec-9212-e0922281157a")
+		(at 208.889727 184 60)
+		(descr "Tooling Hole 1.152mm, 1.3mm solder mask, JLCPCB specification, https://jlcpcb.com/help/article/How-to-add-tooling-holes-for-PCB-assembly-order")
+		(tags "mounting")
+		(property "Reference" "REF**2"
+			(at 0 -1.5 60)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "f6be28e5-e7a9-4834-9225-e29ebd58383a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "ToolingHole_1.152mm"
+			(at 0 1.6 60)
+			(layer "F.Fab")
+			(uuid "7a6a6110-27b3-4515-b723-b4114929e293")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 60)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "24f66ddc-eb59-4b0f-877c-fa40f0e8417e")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 60)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3109657d-ce05-4f1f-af16-ea9a49fe0a24")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 0.7 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "f86c194b-0541-426e-90f8-7bb5912da96c")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 60)
+			(layer "F.Fab")
+			(uuid "c246aa27-4d00-4669-9dba-633da6adb584")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" np_thru_hole circle
+			(at 0 0 60)
+			(size 1.152 1.152)
+			(drill 1.152)
+			(layers "*.Cu" "*.Mask")
+			(solder_mask_margin 0.074)
+			(uuid "f7a9c989-9de0-4364-82e7-52fec89901b1")
+		)
+		(zone
+			(net 0)
+			(net_name "")
+			(layers "F.Cu" "B.Cu")
+			(uuid "6af6f81d-72fa-42ea-a65b-f2caceaaf898")
+			(hatch edge 0.5)
+			(connect_pads
+				(clearance 0)
+			)
+			(min_thickness 0.25)
+			(filled_areas_thickness no)
+			(keepout
+				(tracks not_allowed)
+				(vias allowed)
+				(pads allowed)
+				(copperpour not_allowed)
+				(footprints not_allowed)
+			)
+			(placement
+				(enabled no)
+				(sheetname "")
+			)
+			(fill
+				(thermal_gap 0.5)
+				(thermal_bridge_width 0.5)
+			)
+			(polygon
+				(pts
+					(xy 209.239727 183.393782) (xy 209.084479 183.327638) (xy 208.917913 183.300568) (xy 208.749709 183.314146)
+					(xy 208.589642 183.367585) (xy 208.447015 183.457777) (xy 208.330117 183.57948) (xy 208.245741 183.725624)
+					(xy 208.198792 183.887712) (xy 208.191997 184.056326) (xy 208.225751 184.221668) (xy 208.298094 184.374126)
+					(xy 208.40482 184.504841) (xy 208.539727 184.606218) (xy 208.694975 184.672362) (xy 208.861541 184.699432)
+					(xy 209.029745 184.685854) (xy 209.189812 184.632415) (xy 209.332439 184.542223) (xy 209.449337 184.42052)
+					(xy 209.533713 184.274376) (xy 209.580662 184.112288) (xy 209.587457 183.943674) (xy 209.553703 183.778332)
+					(xy 209.48136 183.625874) (xy 209.374634 183.495159)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
 	(footprint "Capacitor_SMD:C_0603_1608Metric"
 		(layer "F.Cu")
 		(uuid "42fb27a4-2557-47fc-be39-6e1a9dafa4c4")
@@ -2205,6 +2457,258 @@
 				(xyz 0 0 0)
 			)
 		)
+	)
+	(footprint "MountingHole:ToolingHole_1.152mm"
+		(layer "F.Cu")
+		(uuid "44147a98-e380-4c04-8d03-25c422c1693d")
+		(at 190 150 180)
+		(descr "Tooling Hole 1.152mm, 1.3mm solder mask, JLCPCB specification, https://jlcpcb.com/help/article/How-to-add-tooling-holes-for-PCB-assembly-order")
+		(tags "mounting")
+		(property "Reference" "REF**5"
+			(at 0 -1.5 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "c0c4cdc9-82a7-4214-9b5b-d67510a4167e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "ToolingHole_1.152mm"
+			(at 0 1.6 0)
+			(layer "F.Fab")
+			(uuid "7f858a0a-f7ba-4d16-b8e9-113d25e6dcd7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "db3386f8-df4d-4dcd-9738-872b54724a33")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "97312c42-71e7-4b04-a8a0-df8e81b2bac7")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 0.7 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "e5d99c1b-599e-4579-99c6-0a1c5608e7e3")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "746859f2-70ad-44c5-a597-1a0e6e54ba5c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" np_thru_hole circle
+			(at 0 0 180)
+			(size 1.152 1.152)
+			(drill 1.152)
+			(layers "*.Cu" "*.Mask")
+			(solder_mask_margin 0.074)
+			(uuid "1b0c0660-37e6-4026-ab49-1ba33530e159")
+		)
+		(zone
+			(net 0)
+			(net_name "")
+			(layers "F.Cu" "B.Cu")
+			(uuid "217da709-d39c-4072-908d-c50cfb832f94")
+			(hatch edge 0.5)
+			(connect_pads
+				(clearance 0)
+			)
+			(min_thickness 0.25)
+			(filled_areas_thickness no)
+			(keepout
+				(tracks not_allowed)
+				(vias allowed)
+				(pads allowed)
+				(copperpour not_allowed)
+				(footprints not_allowed)
+			)
+			(placement
+				(enabled no)
+				(sheetname "")
+			)
+			(fill
+				(thermal_gap 0.5)
+				(thermal_bridge_width 0.5)
+			)
+			(polygon
+				(pts
+					(xy 189.3 150) (xy 189.320341 150.167521) (xy 189.380181 150.325306) (xy 189.476042 150.464186)
+					(xy 189.602355 150.576089) (xy 189.751777 150.654511) (xy 189.915624 150.694896) (xy 190.084376 150.694896)
+					(xy 190.248223 150.654511) (xy 190.397645 150.576089) (xy 190.523958 150.464186) (xy 190.619819 150.325306)
+					(xy 190.679659 150.167521) (xy 190.7 150) (xy 190.679659 149.832479) (xy 190.619819 149.674694)
+					(xy 190.523958 149.535814) (xy 190.397645 149.423911) (xy 190.248223 149.345489) (xy 190.084376 149.305104)
+					(xy 189.915624 149.305104) (xy 189.751777 149.345489) (xy 189.602355 149.423911) (xy 189.476042 149.535814)
+					(xy 189.380181 149.674694) (xy 189.320341 149.832479)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(footprint "MountingHole:ToolingHole_1.152mm"
+		(layer "F.Cu")
+		(uuid "49213279-647f-44d7-b988-b027cd5d98c7")
+		(at 130 184.641016 60)
+		(descr "Tooling Hole 1.152mm, 1.3mm solder mask, JLCPCB specification, https://jlcpcb.com/help/article/How-to-add-tooling-holes-for-PCB-assembly-order")
+		(tags "mounting")
+		(property "Reference" "REF**1"
+			(at 0 -1.5 60)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "8f707524-7e76-4404-a6b1-8716994a9d92")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "ToolingHole_1.152mm"
+			(at 0 1.6 60)
+			(layer "F.Fab")
+			(uuid "0ee5ae14-ae43-4ddd-933e-68af19930dfe")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 60)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9794335d-e949-481a-9026-0747c55b0a4d")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 60)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ddb7e1ed-144b-4ca6-a199-18d1f5a0091f")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 0.7 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "fcc6c438-a7cd-41b6-9478-b36bc9efb622")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 60)
+			(layer "F.Fab")
+			(uuid "7a8d1945-f2f5-4722-a800-f23502544549")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" np_thru_hole circle
+			(at 0 0 60)
+			(size 1.152 1.152)
+			(drill 1.152)
+			(layers "*.Cu" "*.Mask")
+			(solder_mask_margin 0.074)
+			(uuid "7d75dfee-65ce-4857-80ce-df677d7009ee")
+		)
+		(zone
+			(net 0)
+			(net_name "")
+			(layers "F.Cu" "B.Cu")
+			(uuid "deed5b43-18d4-4cb4-94d8-31cff668ad2b")
+			(hatch edge 0.5)
+			(connect_pads
+				(clearance 0)
+			)
+			(min_thickness 0.25)
+			(filled_areas_thickness no)
+			(keepout
+				(tracks not_allowed)
+				(vias allowed)
+				(pads allowed)
+				(copperpour not_allowed)
+				(footprints not_allowed)
+			)
+			(placement
+				(enabled no)
+				(sheetname "")
+			)
+			(fill
+				(thermal_gap 0.5)
+				(thermal_bridge_width 0.5)
+			)
+			(polygon
+				(pts
+					(xy 130.35 184.034798) (xy 130.194752 183.968654) (xy 130.028186 183.941584) (xy 129.859982 183.955162)
+					(xy 129.699915 184.008601) (xy 129.557288 184.098793) (xy 129.44039 184.220496) (xy 129.356014 184.36664)
+					(xy 129.309065 184.528728) (xy 129.30227 184.697342) (xy 129.336024 184.862684) (xy 129.408367 185.015142)
+					(xy 129.515093 185.145857) (xy 129.65 185.247234) (xy 129.805248 185.313378) (xy 129.971814 185.340448)
+					(xy 130.140018 185.32687) (xy 130.300085 185.273431) (xy 130.442712 185.183239) (xy 130.55961 185.061536)
+					(xy 130.643986 184.915392) (xy 130.690935 184.753304) (xy 130.69773 184.58469) (xy 130.663976 184.419348)
+					(xy 130.591633 184.26689) (xy 130.484907 184.136175)
+				)
+			)
+		)
+		(embedded_fonts no)
 	)
 	(footprint "easyeda2kicad:LED-SMD_4P-L5.0-W5.0-TL_WS2812B-B"
 		(layer "F.Cu")
@@ -2457,6 +2961,132 @@
 			)
 		)
 	)
+	(footprint "MountingHole:ToolingHole_1.152mm"
+		(layer "F.Cu")
+		(uuid "4d9ea2f3-9c8f-496f-b17a-0470223c4121")
+		(at 170 184.641016 120)
+		(descr "Tooling Hole 1.152mm, 1.3mm solder mask, JLCPCB specification, https://jlcpcb.com/help/article/How-to-add-tooling-holes-for-PCB-assembly-order")
+		(tags "mounting")
+		(property "Reference" "REF**3"
+			(at 0 -1.5 120)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "37d57fa6-4469-46ef-bac4-a51189c2b8df")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "ToolingHole_1.152mm"
+			(at 0 1.6 120)
+			(layer "F.Fab")
+			(uuid "ea363c53-c3a6-485e-8b7c-638c7c5099b6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 120)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b173a1e3-222b-40c7-b0bb-cfb3df44f007")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 120)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "45f0fa07-1fde-47d4-b63b-1258699f69c3")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 0.7 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "ac57180b-76b8-4938-9e2a-c2aa6a697cc8")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 120)
+			(layer "F.Fab")
+			(uuid "8efa72bc-ecb1-4503-ba7e-c2e26ef10f8b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" np_thru_hole circle
+			(at 0 0 120)
+			(size 1.152 1.152)
+			(drill 1.152)
+			(layers "*.Cu" "*.Mask")
+			(solder_mask_margin 0.074)
+			(uuid "f1ab4729-7005-46b4-b089-9ffca7379beb")
+		)
+		(zone
+			(net 0)
+			(net_name "")
+			(layers "F.Cu" "B.Cu")
+			(uuid "339627c9-d7e8-4bb6-b396-97e4cb34ef33")
+			(hatch edge 0.5)
+			(connect_pads
+				(clearance 0)
+			)
+			(min_thickness 0.25)
+			(filled_areas_thickness no)
+			(keepout
+				(tracks not_allowed)
+				(vias allowed)
+				(pads allowed)
+				(copperpour not_allowed)
+				(footprints not_allowed)
+			)
+			(placement
+				(enabled no)
+				(sheetname "")
+			)
+			(fill
+				(thermal_gap 0.5)
+				(thermal_bridge_width 0.5)
+			)
+			(polygon
+				(pts
+					(xy 169.65 184.034798) (xy 169.515093 184.136175) (xy 169.408367 184.26689) (xy 169.336024 184.419348)
+					(xy 169.30227 184.58469) (xy 169.309065 184.753304) (xy 169.356014 184.915392) (xy 169.44039 185.061536)
+					(xy 169.557288 185.183239) (xy 169.699915 185.273431) (xy 169.859982 185.32687) (xy 170.028186 185.340448)
+					(xy 170.194752 185.313378) (xy 170.35 185.247234) (xy 170.484907 185.145857) (xy 170.591633 185.015142)
+					(xy 170.663976 184.862684) (xy 170.69773 184.697342) (xy 170.690935 184.528728) (xy 170.643986 184.36664)
+					(xy 170.55961 184.220496) (xy 170.442712 184.098793) (xy 170.300085 184.008601) (xy 170.140018 183.955162)
+					(xy 169.971814 183.941584) (xy 169.805248 183.968654)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
 	(footprint "easyeda2kicad:LED-SMD_4P-L5.0-W5.0-TL_WS2812B-B"
 		(layer "F.Cu")
 		(uuid "4f59ca7c-1763-4729-a35a-b739f4b4ea98")
@@ -2707,6 +3337,132 @@
 				(xyz 0 0 0)
 			)
 		)
+	)
+	(footprint "MountingHole:ToolingHole_1.152mm"
+		(layer "F.Cu")
+		(uuid "4fdeed90-c521-4e9a-aa7c-fc2dd4493524")
+		(at 150 218)
+		(descr "Tooling Hole 1.152mm, 1.3mm solder mask, JLCPCB specification, https://jlcpcb.com/help/article/How-to-add-tooling-holes-for-PCB-assembly-order")
+		(tags "mounting")
+		(property "Reference" "REF**"
+			(at 0 -1.5 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "1f494299-13a3-4914-9639-5e4ed011784a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "ToolingHole_1.152mm"
+			(at 0 1.6 0)
+			(layer "F.Fab")
+			(uuid "441a0ced-a95a-494c-8fe1-9b4ef898025d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "350afb9b-b119-4c4f-9089-cc6a3ce7066a")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7f2c01dd-f87e-4e5d-9f59-260444b8d37f")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 0.7 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "06b972e3-1311-453b-84ff-f9bf5689a1ee")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "1a7054a1-539b-4bd5-bd84-c525038f50f5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" np_thru_hole circle
+			(at 0 0)
+			(size 1.152 1.152)
+			(drill 1.152)
+			(layers "*.Cu" "*.Mask")
+			(solder_mask_margin 0.074)
+			(uuid "7b7d1548-22ef-4f8a-ba6a-203b579f6f27")
+		)
+		(zone
+			(net 0)
+			(net_name "")
+			(layers "F.Cu" "B.Cu")
+			(uuid "268b7774-9c7c-41cd-90b0-c1ccc955c6e1")
+			(hatch edge 0.5)
+			(connect_pads
+				(clearance 0)
+			)
+			(min_thickness 0.25)
+			(filled_areas_thickness no)
+			(keepout
+				(tracks not_allowed)
+				(vias allowed)
+				(pads allowed)
+				(copperpour not_allowed)
+				(footprints not_allowed)
+			)
+			(placement
+				(enabled no)
+				(sheetname "")
+			)
+			(fill
+				(thermal_gap 0.5)
+				(thermal_bridge_width 0.5)
+			)
+			(polygon
+				(pts
+					(xy 150.7 218) (xy 150.679659 217.832479) (xy 150.619819 217.674694) (xy 150.523958 217.535814)
+					(xy 150.397645 217.423911) (xy 150.248223 217.345489) (xy 150.084376 217.305104) (xy 149.915624 217.305104)
+					(xy 149.751777 217.345489) (xy 149.602355 217.423911) (xy 149.476042 217.535814) (xy 149.380181 217.674694)
+					(xy 149.320341 217.832479) (xy 149.3 218) (xy 149.320341 218.167521) (xy 149.380181 218.325306)
+					(xy 149.476042 218.464186) (xy 149.602355 218.576089) (xy 149.751777 218.654511) (xy 149.915624 218.694896)
+					(xy 150.084376 218.694896) (xy 150.248223 218.654511) (xy 150.397645 218.576089) (xy 150.523958 218.464186)
+					(xy 150.619819 218.325306) (xy 150.679659 218.167521)
+				)
+			)
+		)
+		(embedded_fonts no)
 	)
 	(footprint "easyeda2kicad:LED-SMD_4P-L5.0-W5.0-TL_WS2812B-B"
 		(layer "F.Cu")
@@ -5978,6 +6734,7 @@
 		(property "Reference" "TP6"
 			(at 1.938328 0.024916 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "335af33b-8ef2-4a5e-89d9-b01f60f02fd9")
 			(effects
 				(font
@@ -7301,6 +8058,102 @@
 			)
 		)
 	)
+	(footprint "MountingHole:MountingHole_2.1mm"
+		(layer "F.Cu")
+		(uuid "a0db5d38-974b-47b7-9000-87a2de4e0ed2")
+		(at 150 82 180)
+		(descr "Mounting Hole 2.1mm, no annular, generated by kicad-footprint-generator mountinghole.py")
+		(tags "mountinghole")
+		(property "Reference" "REF**6"
+			(at 0 -3.05 180)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "d59ec454-6225-42e8-865d-e3964e9ff664")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "MountingHole_2.1mm"
+			(at 0 3.05 180)
+			(layer "F.Fab")
+			(uuid "efcda0ba-5cc9-4cac-9deb-ae653b21e2bf")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 180)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "01c5f611-0b0a-4847-86a4-226ab2263ded")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 180)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "54ad2023-3f11-4013-89ce-01b633ba0434")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 2.1 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill no)
+			(layer "Cmts.User")
+			(uuid "486e2ab4-351d-4f81-b006-e1e99a9984de")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 2.35 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "f198d6f3-1885-4756-96f3-815451319991")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 180)
+			(layer "F.Fab")
+			(uuid "91735b08-da99-49ce-8105-1adb35fc9005")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" np_thru_hole circle
+			(at 0 0 180)
+			(size 2.1 2.1)
+			(drill 2.1)
+			(layers "*.Cu" "*.Mask")
+			(uuid "bf5057ac-c76c-4844-bedc-1bd24d583685")
+		)
+		(embedded_fonts no)
+	)
 	(footprint "easyeda2kicad:LED-SMD_4P-L5.0-W5.0-TL_WS2812B-B"
 		(layer "F.Cu")
 		(uuid "a7467eab-478a-4b2a-b2e7-1a0227ad925c")
@@ -7985,6 +8838,7 @@
 		(property "Reference" "TP5"
 			(at 2.415872 0.012279 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "f7528140-ee60-4753-a8ea-d5050213a596")
 			(effects
 				(font
@@ -8516,6 +9370,132 @@
 			)
 		)
 	)
+	(footprint "MountingHole:ToolingHole_1.152mm"
+		(layer "F.Cu")
+		(uuid "b0a78b95-c006-447a-87df-f62952670bfd")
+		(at 110 150)
+		(descr "Tooling Hole 1.152mm, 1.3mm solder mask, JLCPCB specification, https://jlcpcb.com/help/article/How-to-add-tooling-holes-for-PCB-assembly-order")
+		(tags "mounting")
+		(property "Reference" "REF**"
+			(at 0 -1.5 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "726b3de0-b705-42c8-8e12-03bae372e218")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "ToolingHole_1.152mm"
+			(at 0 1.6 0)
+			(layer "F.Fab")
+			(uuid "229315ba-597c-4351-8180-4614e8a793b2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "464945b8-063d-4378-adb0-aeb33398210b")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "52cf11b6-42bc-4589-a32c-2bd005487fa4")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 0.7 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "62d1fb22-64dc-4fb2-a6b0-9c67664ab0de")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "5cdba923-76c4-401d-8973-ad1dbdbb363a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" np_thru_hole circle
+			(at 0 0)
+			(size 1.152 1.152)
+			(drill 1.152)
+			(layers "*.Cu" "*.Mask")
+			(solder_mask_margin 0.074)
+			(uuid "03b6648e-4d95-4997-94c7-0996c04c9e63")
+		)
+		(zone
+			(net 0)
+			(net_name "")
+			(layers "F.Cu" "B.Cu")
+			(uuid "72ea99cc-257c-4007-9c0b-af642a51af64")
+			(hatch edge 0.5)
+			(connect_pads
+				(clearance 0)
+			)
+			(min_thickness 0.25)
+			(filled_areas_thickness no)
+			(keepout
+				(tracks not_allowed)
+				(vias allowed)
+				(pads allowed)
+				(copperpour not_allowed)
+				(footprints not_allowed)
+			)
+			(placement
+				(enabled no)
+				(sheetname "")
+			)
+			(fill
+				(thermal_gap 0.5)
+				(thermal_bridge_width 0.5)
+			)
+			(polygon
+				(pts
+					(xy 110.7 150) (xy 110.679659 149.832479) (xy 110.619819 149.674694) (xy 110.523958 149.535814)
+					(xy 110.397645 149.423911) (xy 110.248223 149.345489) (xy 110.084376 149.305104) (xy 109.915624 149.305104)
+					(xy 109.751777 149.345489) (xy 109.602355 149.423911) (xy 109.476042 149.535814) (xy 109.380181 149.674694)
+					(xy 109.320341 149.832479) (xy 109.3 150) (xy 109.320341 150.167521) (xy 109.380181 150.325306)
+					(xy 109.476042 150.464186) (xy 109.602355 150.576089) (xy 109.751777 150.654511) (xy 109.915624 150.694896)
+					(xy 110.084376 150.694896) (xy 110.248223 150.654511) (xy 110.397645 150.576089) (xy 110.523958 150.464186)
+					(xy 110.619819 150.325306) (xy 110.679659 150.167521)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
 	(footprint "Capacitor_SMD:C_0603_1608Metric"
 		(layer "F.Cu")
 		(uuid "b236e869-09b6-4aee-b292-466a9754b003")
@@ -8978,6 +9958,258 @@
 				(xyz 0 0 0)
 			)
 		)
+	)
+	(footprint "MountingHole:ToolingHole_1.152mm"
+		(layer "F.Cu")
+		(uuid "b8b70eea-8b5f-496a-afd1-5de86f331f0f")
+		(at 91.110273 116 -120)
+		(descr "Tooling Hole 1.152mm, 1.3mm solder mask, JLCPCB specification, https://jlcpcb.com/help/article/How-to-add-tooling-holes-for-PCB-assembly-order")
+		(tags "mounting")
+		(property "Reference" "REF**7"
+			(at 0 -1.5 60)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "add00e3b-fa6b-409b-9f58-87aa916d6fd6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "ToolingHole_1.152mm"
+			(at 0 1.6 60)
+			(layer "F.Fab")
+			(uuid "64f01614-92ae-443a-9349-d1a128c982d9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 240)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "afe8f2bd-5b23-480e-8408-332f303f0ffc")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 240)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "63a8f75e-6b3e-42e6-9d97-18f220b33b4a")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 0.7 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "1f1f9a25-8e3c-430f-890b-cd5881ca1ba4")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 60)
+			(layer "F.Fab")
+			(uuid "7b9a1576-a48d-4dd1-bc72-40c5fe484f3e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" np_thru_hole circle
+			(at 0 0 240)
+			(size 1.152 1.152)
+			(drill 1.152)
+			(layers "*.Cu" "*.Mask")
+			(solder_mask_margin 0.074)
+			(uuid "80b19cbc-ce4a-438c-922c-8a6ed91bc2fc")
+		)
+		(zone
+			(net 0)
+			(net_name "")
+			(layers "F.Cu" "B.Cu")
+			(uuid "f7fe6204-b00e-46c8-bc67-07c9041b1a23")
+			(hatch edge 0.5)
+			(connect_pads
+				(clearance 0)
+			)
+			(min_thickness 0.25)
+			(filled_areas_thickness no)
+			(keepout
+				(tracks not_allowed)
+				(vias allowed)
+				(pads allowed)
+				(copperpour not_allowed)
+				(footprints not_allowed)
+			)
+			(placement
+				(enabled no)
+				(sheetname "")
+			)
+			(fill
+				(thermal_gap 0.5)
+				(thermal_bridge_width 0.5)
+			)
+			(polygon
+				(pts
+					(xy 90.760273 116.606218) (xy 90.915521 116.672362) (xy 91.082087 116.699432) (xy 91.250291 116.685854)
+					(xy 91.410358 116.632415) (xy 91.552985 116.542223) (xy 91.669883 116.42052) (xy 91.754259 116.274376)
+					(xy 91.801208 116.112288) (xy 91.808003 115.943674) (xy 91.774249 115.778332) (xy 91.701906 115.625874)
+					(xy 91.59518 115.495159) (xy 91.460273 115.393782) (xy 91.305025 115.327638) (xy 91.138459 115.300568)
+					(xy 90.970255 115.314146) (xy 90.810188 115.367585) (xy 90.667561 115.457777) (xy 90.550663 115.57948)
+					(xy 90.466287 115.725624) (xy 90.419338 115.887712) (xy 90.412543 116.056326) (xy 90.446297 116.221668)
+					(xy 90.51864 116.374126) (xy 90.625366 116.504841)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(footprint "MountingHole:ToolingHole_1.152mm"
+		(layer "F.Cu")
+		(uuid "b9936294-6cda-4c2f-bd28-effd214db966")
+		(at 170 115.358984 -120)
+		(descr "Tooling Hole 1.152mm, 1.3mm solder mask, JLCPCB specification, https://jlcpcb.com/help/article/How-to-add-tooling-holes-for-PCB-assembly-order")
+		(tags "mounting")
+		(property "Reference" "REF**8"
+			(at 0 -1.5 60)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "6f2310b8-579b-4237-a9b9-8c322c99ccdb")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "ToolingHole_1.152mm"
+			(at 0 1.6 60)
+			(layer "F.Fab")
+			(uuid "1a24228e-630f-48ae-accc-9cf7010d659a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 240)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6bb7771b-1503-42ea-9acc-0a78b151adc4")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 240)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "143ab70c-4858-48fa-8c65-4d9fbe80bbb1")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 0.7 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "6b8cb7f0-9e15-4795-9758-d750b347019d")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 60)
+			(layer "F.Fab")
+			(uuid "7e476767-50e3-47a3-b02a-0d12ae5c9295")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" np_thru_hole circle
+			(at 0 0 240)
+			(size 1.152 1.152)
+			(drill 1.152)
+			(layers "*.Cu" "*.Mask")
+			(solder_mask_margin 0.074)
+			(uuid "a7d32d60-0317-4845-b272-37b2c76b1efd")
+		)
+		(zone
+			(net 0)
+			(net_name "")
+			(layers "F.Cu" "B.Cu")
+			(uuid "a41af413-5758-40ee-8f59-ba7c9b95ae18")
+			(hatch edge 0.5)
+			(connect_pads
+				(clearance 0)
+			)
+			(min_thickness 0.25)
+			(filled_areas_thickness no)
+			(keepout
+				(tracks not_allowed)
+				(vias allowed)
+				(pads allowed)
+				(copperpour not_allowed)
+				(footprints not_allowed)
+			)
+			(placement
+				(enabled no)
+				(sheetname "")
+			)
+			(fill
+				(thermal_gap 0.5)
+				(thermal_bridge_width 0.5)
+			)
+			(polygon
+				(pts
+					(xy 169.65 115.965202) (xy 169.805248 116.031346) (xy 169.971814 116.058416) (xy 170.140018 116.044838)
+					(xy 170.300085 115.991399) (xy 170.442712 115.901207) (xy 170.55961 115.779504) (xy 170.643986 115.63336)
+					(xy 170.690935 115.471272) (xy 170.69773 115.302658) (xy 170.663976 115.137316) (xy 170.591633 114.984858)
+					(xy 170.484907 114.854143) (xy 170.35 114.752766) (xy 170.194752 114.686622) (xy 170.028186 114.659552)
+					(xy 169.859982 114.67313) (xy 169.699915 114.726569) (xy 169.557288 114.816761) (xy 169.44039 114.938464)
+					(xy 169.356014 115.084608) (xy 169.309065 115.246696) (xy 169.30227 115.41531) (xy 169.336024 115.580652)
+					(xy 169.408367 115.73311) (xy 169.515093 115.863825)
+				)
+			)
+		)
+		(embedded_fonts no)
 	)
 	(footprint "easyeda2kicad:LED-SMD_4P-L5.0-W5.0-TL_WS2812B-B"
 		(layer "F.Cu")
@@ -11441,6 +12673,132 @@
 			)
 		)
 	)
+	(footprint "MountingHole:ToolingHole_1.152mm"
+		(layer "F.Cu")
+		(uuid "e3713778-4ec8-49d3-81ed-54c6e53a9c1a")
+		(at 208.889727 116 120)
+		(descr "Tooling Hole 1.152mm, 1.3mm solder mask, JLCPCB specification, https://jlcpcb.com/help/article/How-to-add-tooling-holes-for-PCB-assembly-order")
+		(tags "mounting")
+		(property "Reference" "REF**4"
+			(at 0 -1.5 120)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "f82c0cc5-c6fb-4593-8094-fa3f17ddc237")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "ToolingHole_1.152mm"
+			(at 0 1.6 120)
+			(layer "F.Fab")
+			(uuid "72c9441d-012e-42ba-9868-627de0894f48")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 120)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "73231137-f945-4120-a7d9-05ee8d62e8fd")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 120)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1ce80288-29c4-48d1-96e9-5f981854675c")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 0.7 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "a04ec72c-faef-4eae-b73f-05698dcc8eba")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 120)
+			(layer "F.Fab")
+			(uuid "ea8fba79-b4f0-4b54-8383-401d03459a09")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" np_thru_hole circle
+			(at 0 0 120)
+			(size 1.152 1.152)
+			(drill 1.152)
+			(layers "*.Cu" "*.Mask")
+			(solder_mask_margin 0.074)
+			(uuid "26aea573-ac73-46d0-a0b5-e2c4cd5598b5")
+		)
+		(zone
+			(net 0)
+			(net_name "")
+			(layers "F.Cu" "B.Cu")
+			(uuid "acbff28d-d48a-4dab-90ef-db45b5f91d25")
+			(hatch edge 0.5)
+			(connect_pads
+				(clearance 0)
+			)
+			(min_thickness 0.25)
+			(filled_areas_thickness no)
+			(keepout
+				(tracks not_allowed)
+				(vias allowed)
+				(pads allowed)
+				(copperpour not_allowed)
+				(footprints not_allowed)
+			)
+			(placement
+				(enabled no)
+				(sheetname "")
+			)
+			(fill
+				(thermal_gap 0.5)
+				(thermal_bridge_width 0.5)
+			)
+			(polygon
+				(pts
+					(xy 208.539727 115.393782) (xy 208.40482 115.495159) (xy 208.298094 115.625874) (xy 208.225751 115.778332)
+					(xy 208.191997 115.943674) (xy 208.198792 116.112288) (xy 208.245741 116.274376) (xy 208.330117 116.42052)
+					(xy 208.447015 116.542223) (xy 208.589642 116.632415) (xy 208.749709 116.685854) (xy 208.917913 116.699432)
+					(xy 209.084479 116.672362) (xy 209.239727 116.606218) (xy 209.374634 116.504841) (xy 209.48136 116.374126)
+					(xy 209.553703 116.221668) (xy 209.587457 116.056326) (xy 209.580662 115.887712) (xy 209.533713 115.725624)
+					(xy 209.449337 115.57948) (xy 209.332439 115.457777) (xy 209.189812 115.367585) (xy 209.029745 115.314146)
+					(xy 208.861541 115.300568) (xy 208.694975 115.327638)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
 	(footprint "Capacitor_SMD:C_0603_1608Metric"
 		(layer "F.Cu")
 		(uuid "e472d6ae-2244-4341-b6fb-fc8bc1133a1d")
@@ -12164,6 +13522,7 @@
 		(property "Reference" "TP7"
 			(at 2.072387 0.051815 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "1ce42a28-4647-45ed-923c-48ec441a78ce")
 			(effects
 				(font
@@ -12482,6 +13841,132 @@
 				(xyz 0 0 0)
 			)
 		)
+	)
+	(footprint "MountingHole:ToolingHole_1.152mm"
+		(layer "F.Cu")
+		(uuid "fdf4a7b7-c3e9-46dc-adc1-a4d79990819b")
+		(at 130 115.358984 -60)
+		(descr "Tooling Hole 1.152mm, 1.3mm solder mask, JLCPCB specification, https://jlcpcb.com/help/article/How-to-add-tooling-holes-for-PCB-assembly-order")
+		(tags "mounting")
+		(property "Reference" "REF**10"
+			(at 0 -1.5 120)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "3776364a-eb14-43fb-a699-426b572c4a73")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "ToolingHole_1.152mm"
+			(at 0 1.6 120)
+			(layer "F.Fab")
+			(uuid "222ac613-7337-419c-a594-051ba70bcecc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 300)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0d8fdf03-cc69-402f-b3d6-f8590b15e473")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 300)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e997ef42-1b71-43fd-a62e-ba92ca4cfc12")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 0.7 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "439c7db7-2b63-4407-ae53-d615e8aec8d1")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 120)
+			(layer "F.Fab")
+			(uuid "4246c24b-c498-41cb-b590-035669c1893e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" np_thru_hole circle
+			(at 0 0 300)
+			(size 1.152 1.152)
+			(drill 1.152)
+			(layers "*.Cu" "*.Mask")
+			(solder_mask_margin 0.074)
+			(uuid "2bae57bb-87a1-4d73-aa7e-3d6e0d1a63a9")
+		)
+		(zone
+			(net 0)
+			(net_name "")
+			(layers "F.Cu" "B.Cu")
+			(uuid "955fbced-47c2-4e46-8bdf-5548bbda5742")
+			(hatch edge 0.5)
+			(connect_pads
+				(clearance 0)
+			)
+			(min_thickness 0.25)
+			(filled_areas_thickness no)
+			(keepout
+				(tracks not_allowed)
+				(vias allowed)
+				(pads allowed)
+				(copperpour not_allowed)
+				(footprints not_allowed)
+			)
+			(placement
+				(enabled no)
+				(sheetname "")
+			)
+			(fill
+				(thermal_gap 0.5)
+				(thermal_bridge_width 0.5)
+			)
+			(polygon
+				(pts
+					(xy 130.35 115.965202) (xy 130.484907 115.863825) (xy 130.591633 115.73311) (xy 130.663976 115.580652)
+					(xy 130.69773 115.41531) (xy 130.690935 115.246696) (xy 130.643986 115.084608) (xy 130.55961 114.938464)
+					(xy 130.442712 114.816761) (xy 130.300085 114.726569) (xy 130.140018 114.67313) (xy 129.971814 114.659552)
+					(xy 129.805248 114.686622) (xy 129.65 114.752766) (xy 129.515093 114.854143) (xy 129.408367 114.984858)
+					(xy 129.336024 115.137316) (xy 129.30227 115.302658) (xy 129.309065 115.471272) (xy 129.356014 115.63336)
+					(xy 129.44039 115.779504) (xy 129.557288 115.901207) (xy 129.699915 115.991399) (xy 129.859982 116.044838)
+					(xy 130.028186 116.058416) (xy 130.194752 116.031346)
+				)
+			)
+		)
+		(embedded_fonts no)
 	)
 	(footprint "easyeda2kicad:SW-TH_SK-12E12-G040"
 		(locked yes)
