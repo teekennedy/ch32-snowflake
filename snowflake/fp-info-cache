@@ -1,4 +1,4 @@
-26747441898859792
+26752732654319809
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -59352,6 +59352,20 @@ ceramic
 0
 3
 3
+Digikey
+SW_SLW-1277545-3A-RA-N-D
+
+
+0
+5
+4
+Digikey
+Untitled
+
+
+0
+0
+0
 Diode_SMD
 D_0201_0603Metric
 Diode SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf), generated with kicad-footprint-generator
@@ -104716,6 +104730,13 @@ TestPoint
 TestPoint_THTPad_D4.0mm_Drill2.0mm
 THT pad as test Point, diameter 4.0mm, hole diameter 2.0mm
 test point THT pad
+0
+1
+1
+TestPoint
+TouchPad_Snowflake
+SMD rectangular pad as test Point, square 1.0mm side length
+test point SMD pad rectangle square
 0
 1
 1

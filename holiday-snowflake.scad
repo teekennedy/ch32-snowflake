@@ -1,9 +1,9 @@
 include <BOSL2/std.scad>
 
 //visualization options
-show_leds = true;
+show_leds = false;
 show_halos = false;
-show_board = false;
+show_board = true;
 
 $fn=16;
 
@@ -82,11 +82,11 @@ module secondary_branch(
 
 // When importing the LEDs into KiCAD (for easier alignment), the scale is somehow different from the snowflake.
 // Adding these markings in the corners so both exports have the same bounding box.
-for(x=[base_diameter / -2, base_diameter / 2]) {
-    for(y=[base_diameter / -2, base_diameter / 2]) {
-        left(x) back(y) rect(0.2);
-    }
-}
+//for(x=[base_diameter / -2, base_diameter / 2]) {
+//    for(y=[base_diameter / -2, base_diameter / 2]) {
+//        left(x) back(y) rect(0.2);
+//    }
+//}
 // Rotated so it has vertical primary branches.
 // This will make it easier to address the LEDs starting with the "North" branch.
 zrot(90) {
