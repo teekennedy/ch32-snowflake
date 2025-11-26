@@ -1,0 +1,200 @@
+(footprint "BAT-TH_2P-P14.50_2462"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(locked yes)
+	(layer "F.Cu")
+	(property "Reference" "BAT1"
+		(at 0 -11.25 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "e9ef5fec-a1f7-47ba-90b7-6b7fb3058d5f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "2462"
+		(at 0 11.25 0)
+		(layer "F.Fab")
+		(uuid "4b78a3bd-cff4-42e4-813c-74cd50779268")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e936ced1-5093-49b1-9b87-81b60ae61255")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "37c57611-acf1-4a63-a2fa-76b4e7cb0bfa")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC Part" "C3029547"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7b60144f-a6f8-443b-b025-f592f2efd2b1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole exclude_from_pos_files exclude_from_bom dnp)
+	(fp_line
+		(start -29.4 -16.4)
+		(end -29.4 -14.1)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "200f3fe3-720c-4013-ae98-48f5e61468d6")
+	)
+	(fp_line
+		(start -29.4 13.96)
+		(end -29.4 16.4)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b4372f38-17ba-489c-a656-cde5ab46a6de")
+	)
+	(fp_line
+		(start -29.4 16.4)
+		(end 29.4 16.4)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6a89949f-315b-4193-9a2e-e226dbf585d9")
+	)
+	(fp_line
+		(start 29.4 -16.4)
+		(end -29.4 -16.4)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "de471c0c-2c97-4972-884d-aaa0c9845fe9")
+	)
+	(fp_line
+		(start 29.4 -14.26)
+		(end 29.4 -16.4)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b27ff323-8de0-4c90-aabb-3ac8b38822ea")
+	)
+	(fp_line
+		(start 29.4 16.4)
+		(end 29.4 13.93)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "038bb1bd-28a3-43f8-9c7c-3c006bf724ec")
+	)
+	(fp_circle
+		(center -29.4 -16.4)
+		(end -29.37 -16.4)
+		(stroke
+			(width 0.06)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "c56c16b6-6cf2-4688-87a4-91e646b6d9ee")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "243f9f65-83a8-47a7-a06c-06e661768f49")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at 27.1 -7.25)
+		(size 1.6 1.6)
+		(drill 1.020013)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(teardrops
+			(best_length_ratio 0.5)
+			(max_length 1)
+			(best_width_ratio 1)
+			(max_width 2)
+			(curved_edges no)
+			(filter_ratio 0.9)
+			(enabled yes)
+			(allow_two_segments yes)
+			(prefer_zone_connections yes)
+		)
+		(uuid "3b637631-5015-462b-8d25-fadfda947b08")
+	)
+	(pad "2" thru_hole circle
+		(at 27.1 7.25)
+		(size 1.6 1.6)
+		(drill 1.020013)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(teardrops
+			(best_length_ratio 0.5)
+			(max_length 1)
+			(best_width_ratio 1)
+			(max_width 2)
+			(curved_edges no)
+			(filter_ratio 0.9)
+			(enabled yes)
+			(allow_two_segments yes)
+			(prefer_zone_connections yes)
+		)
+		(uuid "a51332db-0dd3-4526-91ca-daa759edc568")
+	)
+	(embedded_fonts no)
+	(model "${EASYEDA2KICAD}/easyeda2kicad.3dshapes/BAT-TH_2P-P14.50_2462.wrl"
+		(offset
+			(xyz 27.1 -0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -0)
+		)
+	)
+)

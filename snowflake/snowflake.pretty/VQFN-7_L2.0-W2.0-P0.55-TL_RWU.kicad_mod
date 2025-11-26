@@ -1,0 +1,187 @@
+(footprint "VQFN-7_L2.0-W2.0-P0.55-TL_RWU"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "U25"
+		(at -0.000576 -1.708713 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "77e6fc99-bf5b-4825-9834-40bb8409c272")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "TPS61022"
+		(at 0 4.75 0)
+		(layer "F.Fab")
+		(uuid "5a91fa3c-e081-49dd-b9c4-9dc87ee228c2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps61022.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e84598d8-e490-4503-9668-8e7d6c4677f4")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "8A Boost Converter, 0.5-5.5 V input, 2.2-5.5V output, Texas RWU0007A VQFN-7"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "68bbcc8c-0605-4764-8779-b75cb61eb5a2")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC" "C915088"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7e6d893a-cd61-4ac3-9b6e-75dd2df10fb4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC Part" "C915088"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "375118f6-2f4e-4f72-ba81-f6288f040e20")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -1.19 1.02)
+		(end 0.31 1.02)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "32632b6e-6a19-46a4-934b-abc4ca88f60f")
+	)
+	(fp_line
+		(start 0.31 -1.01)
+		(end -1.19 -1.01)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "24d38715-e818-4ad1-852d-2c27934c67f3")
+	)
+	(fp_circle
+		(center -1.57 -1.02)
+		(end -1.47 -1.02)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "bec087e3-9a39-4acc-bf99-1c6e30fab21a")
+	)
+	(fp_circle
+		(center -1.18 -1)
+		(end -1.15 -1)
+		(stroke
+			(width 0.06)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "8c3b055c-736e-49cc-9f89-9370b69505ac")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "d88b3928-342e-4f57-b9f6-5db44ed84fc1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -0.8 -0.55)
+		(size 1.15 0.35)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "0d2dd343-cc48-4590-9d8c-709b2efdce55")
+	)
+	(pad "2" smd rect
+		(at -0.65 0)
+		(size 1.45 0.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "8c3ceb22-d172-49c4-9b16-5e26aed09709")
+	)
+	(pad "3" smd rect
+		(at -0.8 0.55)
+		(size 1.15 0.35)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "d2f94ee0-86ee-439d-bd10-54a30d81a706")
+	)
+	(pad "4" smd rect
+		(at 0.8 0.75)
+		(size 0.45 0.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "bd270247-7bdf-43b1-9f68-8abb25cca764")
+	)
+	(pad "5" smd rect
+		(at 0.8 0.25)
+		(size 0.45 0.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "525688e8-cb27-4b0e-8019-e3a648d594c7")
+	)
+	(pad "6" smd rect
+		(at 0.8 -0.25)
+		(size 0.45 0.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "4886be01-a0d6-4c83-a6f2-6b3319c79714")
+	)
+	(pad "7" smd rect
+		(at 0.8 -0.75)
+		(size 0.45 0.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "d73bcf0f-e6d0-4613-85c8-2435331df5d1")
+	)
+	(embedded_fonts no)
+	(model "${EASYEDA2KICAD}/easyeda2kicad.3dshapes/VQFN-7_L2.0-W2.0-P0.55-TL_RWU.wrl"
+		(offset
+			(xyz -0.16 -0 -0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
