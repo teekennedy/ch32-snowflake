@@ -5,10 +5,12 @@
 #define PORT_RGB GPIOA
 #define PIN_RGB PA1
 #define PIN_RGB_NUM (PIN_RGB & 0xf)
-#define WS2812BSIMPLE_IMPLEMENTATION
-#define NUM_LEDS 24
+// Include the implementation of the rgb led driver
+#define RGB_LED_IMPLEMENTATION
 
 #include "tz_5050s2_driver.h"
+
+#define NUM_LEDS 24
 
 uint8_t rainbow[] = {
 	0x80, 0x00, 0x00,
@@ -43,13 +45,13 @@ int main()
 
 	funGpioInitAll(); // Enable GPIOs
 
-	funPinMode( PIN_RGB,   GPIO_CFGLR_OUT_2Mhz_PP ); // Set PIN_RGB to output
+	funPinMode( PIN_RGB, GPIO_CFGLR_OUT_2Mhz_PP ); // Set PIN_RGB to output
 
 
 	int frame = 0;
 	while(1)
 	{
-		WS2812BSimpleSend(PORT_RGB, PIN_RGB_NUM, rainbow, sizeof(rainbow), frame, 3*NUM_LEDS);
+		RGBSend(PORT_RGB, PIN_RGB_NUM, rainbow, sizeof(rainbow), frame, 3*NUM_LEDS);
 		frame += 3;
 		frame %= (int)sizeof(rainbow);
 		Delay_Ms( 50 );

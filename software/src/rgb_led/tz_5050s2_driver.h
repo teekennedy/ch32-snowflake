@@ -1,44 +1,40 @@
-/* Single-File-Header for using asynchronous LEDs with the CH32V003 using GPIO.
+/* Single-File-Header for using asynchronous LEDs using GPIO.
 
-   Copyright 2023 <>< Charles Lohr, under the MIT-x11 or NewBSD License, you choose!
+	 The timings are specifically for the TZ-5050S2, a generic alternative of the WS2812B.
 
    If you are including this in main, simply
-	#define WS2812BSIMPLE_IMPLEMENTATION
-
-   You may also want to define
-  #define WS2812BSIMPLE_NO_IRQ_TWEAKING
-
+	#define RGB_LED_IMPLEMENTATION
 */
 
-#ifndef _WS2812B_SIMPLE
-#define _WS2812B_SIMPLE
+#ifndef _TZ_5050S2__SIMPLE
+#define _TZ_5050S2__SIMPLE
 
 #include <stdint.h>
 
-void WS2812BSimpleSend( GPIO_TypeDef * port, int pin, uint8_t * data, int data_len, int start_offset, int bytes_to_send );
+void RGBSend( GPIO_TypeDef * port, int pin, uint8_t * data, int data_len, int start_offset, int bytes_to_send );
 
-#ifdef WS2812BSIMPLE_IMPLEMENTATION
+#ifdef RGB_LED_IMPLEMENTATION
 
 #include "funconfig.h"
 
 #if FUNCONF_SYSTICK_USE_HCLK != 1
-#error WS2812B Driver Requires FUNCONF_SYSTICK_USE_HCLK
+#error TZ_5050S2 Driver Requires FUNCONF_SYSTICK_USE_HCLK
 #endif
 
 #ifndef FUNCONF_SYSTEM_CORE_CLOCK
-#error WS2812B Driver Requires FUNCONF_SYSTEM_CORE_CLOCK
+#error TZ_5050S2 Driver Requires FUNCONF_SYSTEM_CORE_CLOCK
 #endif
 
 // Min 0.2, typ 0.295, max 0.35
-#define WS2812_T0H_TICKS Ticks_from_Us(0.295)
+#define TZ_5050S2_T0H_TICKS Ticks_from_Us(0.295)
 // Min 0.55, typ 0.595, max 1.2
-#define WS2812_T0L_TICKS Ticks_from_Us(0.595)
+#define TZ_5050S2_T0L_TICKS Ticks_from_Us(0.595)
 // Min 0.55, typ 0.595, max 1.2
-#define WS2812_T1H_TICKS Ticks_from_Us(0.595)
+#define TZ_5050S2_T1H_TICKS Ticks_from_Us(0.595)
 // Min 0.2, typ 0.295, max 0.35
-#define WS2812_T1L_TICKS Ticks_from_Us(0.295)
+#define TZ_5050S2_T1L_TICKS Ticks_from_Us(0.295)
 
-void WS2812BSimpleSend( GPIO_TypeDef * port, int pin, uint8_t * data, int data_len, int start_offset, int bytes_to_send )
+void RGBSend( GPIO_TypeDef * port, int pin, uint8_t * data, int data_len, int start_offset, int bytes_to_send )
 {
 	int port_id = (((intptr_t)port-(intptr_t)GPIOA)>>10);
 	RCC->APB2PCENR |= (RCC_APB2Periph_GPIOA<<port_id);  // Make sure port is enabled.
@@ -78,22 +74,16 @@ void WS2812BSimpleSend( GPIO_TypeDef * port, int pin, uint8_t * data, int data_l
 			if( byte & 0x80 )
 			{
 				port->BSHR = maskon;
-				DelaySysTick(WS2812_T1H_TICKS);
+				DelaySysTick(TZ_5050S2_T1H_TICKS);
 				port->BSHR = maskoff;
-				DelaySysTick(WS2812_T1L_TICKS);
+				DelaySysTick(TZ_5050S2_T1L_TICKS);
 			}
 			else
 			{
-#ifndef WS2812BSIMPLE_NO_IRQ_TWEAKING
-				__disable_irq();
-#endif
 				port->BSHR = maskon;
-				DelaySysTick(WS2812_T0H_TICKS);
+				DelaySysTick(TZ_5050S2_T0H_TICKS);
 				port->BSHR = maskoff;
-#ifndef WS2812BSIMPLE_NO_IRQ_TWEAKING
-				__enable_irq();
-#endif
-				DelaySysTick(WS2812_T0L_TICKS);
+				DelaySysTick(TZ_5050S2_T0L_TICKS);
 			}
 			byte <<= 1;
 		}
