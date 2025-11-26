@@ -8,7 +8,7 @@
 #define WS2812BSIMPLE_IMPLEMENTATION
 #define NUM_LEDS 24
 
-#include "ws2812b_simple.h"
+#include "tz_5050s2_driver.h"
 
 uint8_t rainbow[] = {
 	0x80, 0x00, 0x00,
