@@ -45,10 +45,7 @@ int main()
 
 	funGpioInitAll(); // Enable GPIOs
 	
-	RGBInit();
-
-	funPinMode(PIN_RGB, GPIO_CFGLR_OUT_10Mhz_PP); // Set PIN_RGB to output
-
+	RGBInit(PIN_RGB);
 
 	int frame = 0;
 	// uint32_t iteration = 1;
