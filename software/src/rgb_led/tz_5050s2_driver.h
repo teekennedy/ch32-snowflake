@@ -25,23 +25,45 @@ void RGBSend( GPIO_TypeDef * port, int pin, uint8_t * data, int data_len, int st
 #error TZ_5050S2 Driver Requires FUNCONF_SYSTEM_CORE_CLOCK
 #endif
 
-// Min 0.2, typ 0.295, max 0.35
+/*
+ * This ticks-based implementation 
+// Min 0.2, typ 0.295, max 0.35.
+// On CH32V003 this comes out to 14.16 ticks
 #define TZ_5050S2_T0H_TICKS Ticks_from_Us(0.295)
 // Min 0.55, typ 0.595, max 1.2
+// On CH32V003 this comes out to 28.56 ticks
 #define TZ_5050S2_T0L_TICKS Ticks_from_Us(0.595)
 // Min 0.55, typ 0.595, max 1.2
+// On CH32V003 this comes out to 28.56 ticks
 #define TZ_5050S2_T1H_TICKS Ticks_from_Us(0.595)
 // Min 0.2, typ 0.295, max 0.35
+// On CH32V003 this comes out to 14.16 ticks
 #define TZ_5050S2_T1L_TICKS Ticks_from_Us(0.295)
+*/
 
-void RGBSend( GPIO_TypeDef * port, int pin, uint8_t * data, int data_len, int start_offset, int bytes_to_send )
+#define TZ_5050S2_TICKS_SHORT 1
+#define TZ_5050S2_TICKS_LONG 1
+
+// Min 0.2, typ 0.295, max 0.35.
+// On CH32V003 0.295us comes out to 14.16 ticks
+#define TZ_5050S2_T0H_TICKS TZ_5050S2_TICKS_SHORT
+// Min 0.55, typ 0.595, max 1.2
+// On CH32V003 this comes out to 28.56 ticks
+#define TZ_5050S2_T0L_TICKS TZ_5050S2_TICKS_LONG
+// Min 0.55, typ 0.595, max 1.2
+// On CH32V003 this comes out to 28.56 ticks
+#define TZ_5050S2_T1H_TICKS TZ_5050S2_TICKS_LONG
+// Min 0.2, typ 0.295, max 0.35
+// On CH32V003 this comes out to 14.16 ticks
+#define TZ_5050S2_T1L_TICKS TZ_5050S2_TICKS_SHORT
+
+void RGBInit(int pin)
 {
-	int port_id = (((intptr_t)port-(intptr_t)GPIOA)>>10);
-	RCC->APB2PCENR |= (RCC_APB2Periph_GPIOA<<port_id);  // Make sure port is enabled.
+	funPinMode(pin, GPIO_CFGLR_OUT_10Mhz_PP); // Set PIN_RGB to output
+}
 
-	int poffset = (pin*4);
-	port->CFGLR = ( port->CFGLR & (~(0xf<<poffset))) | ((GPIO_Speed_50MHz | GPIO_CNF_OUT_PP)<<(poffset));
-
+void RGBSend(GPIO_TypeDef * port, int pin, uint8_t * data, int data_len, int start_offset, int bytes_to_send )
+{
 	int maskon = 1<<pin;
 	int maskoff = 1<<(16+pin);
 
@@ -76,12 +98,12 @@ void RGBSend( GPIO_TypeDef * port, int pin, uint8_t * data, int data_len, int st
 				port->BSHR = maskon;
 				DelaySysTick(TZ_5050S2_T1H_TICKS);
 				port->BSHR = maskoff;
-				DelaySysTick(TZ_5050S2_T1L_TICKS);
+				// DelaySysTick(TZ_5050S2_T1L_TICKS);
 			}
 			else
 			{
 				port->BSHR = maskon;
-				DelaySysTick(TZ_5050S2_T0H_TICKS);
+				// DelaySysTick(TZ_5050S2_T0H_TICKS);
 				port->BSHR = maskoff;
 				DelaySysTick(TZ_5050S2_T0L_TICKS);
 			}

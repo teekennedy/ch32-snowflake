@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 // use defines to make more meaningful names for our GPIO pins
-#define PORT_RGB GPIOA
-#define PIN_RGB PA1
+#define PORT_RGB GPIOD
+#define PIN_RGB PD0
 #define PIN_RGB_NUM (PIN_RGB & 0xf)
 // Include the implementation of the rgb led driver
 #define RGB_LED_IMPLEMENTATION
@@ -44,16 +44,20 @@ int main()
 	SystemInit();
 
 	funGpioInitAll(); // Enable GPIOs
+	
+	RGBInit();
 
-	funPinMode( PIN_RGB, GPIO_CFGLR_OUT_2Mhz_PP ); // Set PIN_RGB to output
+	funPinMode(PIN_RGB, GPIO_CFGLR_OUT_10Mhz_PP); // Set PIN_RGB to output
 
 
 	int frame = 0;
+	// uint32_t iteration = 1;
 	while(1)
 	{
+		// printf("Iteration: %lu\nFrame: %i\n", iteration, frame);
 		RGBSend(PORT_RGB, PIN_RGB_NUM, rainbow, sizeof(rainbow), frame, 3*NUM_LEDS);
 		frame += 3;
 		frame %= (int)sizeof(rainbow);
-		Delay_Ms( 50 );
+		Delay_Ms(50);
 	}
 }
