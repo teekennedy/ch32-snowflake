@@ -1,4 +1,4 @@
-(footprint "TestPoint_Pad_D2.0mm"
+(footprint "TouchPad"
 	(version 20241229)
 	(generator "pcbnew")
 	(generator_version "9.0")
@@ -68,27 +68,89 @@
 		)
 	)
 	(attr exclude_from_pos_files)
-	(fp_circle
-		(center 0 0)
-		(end 1.4 0)
-		(stroke
-			(width 0.12)
-			(type solid)
-		)
-		(fill no)
-		(layer "F.SilkS")
-		(uuid "016266fa-3799-47e5-a6f4-503499f157f6")
-	)
-	(fp_circle
-		(center 0 0)
-		(end 1.5 0)
+	(fp_line
+		(start -2.05 1.3)
+		(end -2.05 -1.3)
 		(stroke
 			(width 0.05)
-			(type solid)
+			(type default)
 		)
-		(fill no)
 		(layer "F.CrtYd")
-		(uuid "46740931-96f0-47df-a986-379af3cc1662")
+		(uuid "a115721c-600f-497a-a7a8-fb8ff888d7c7")
+	)
+	(fp_line
+		(start -1.3 -2.05)
+		(end 1.3 -2.05)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "1837f64a-8490-45dc-bb34-cfc4cf87906e")
+	)
+	(fp_line
+		(start 1.3 2.05)
+		(end -1.3 2.05)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "8305dfe8-7ce6-4ab3-8796-7e231fe46333")
+	)
+	(fp_line
+		(start 2.05 -1.3)
+		(end 2.05 1.3)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "c451e042-659b-46d4-af88-8cca5021f020")
+	)
+	(fp_arc
+		(start -2.05 -1.3)
+		(mid -1.83033 -1.83033)
+		(end -1.3 -2.05)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "acd79ccd-4d95-4bd2-a23b-ab3097f7c65f")
+	)
+	(fp_arc
+		(start -1.3 2.05)
+		(mid -1.83033 1.83033)
+		(end -2.05 1.3)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "87b69550-74bc-4656-9924-741c8db53e66")
+	)
+	(fp_arc
+		(start 1.3 -2.05)
+		(mid 1.83033 -1.83033)
+		(end 2.05 -1.3)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "5d575332-95e1-4e8c-8d24-d47220fddb6b")
+	)
+	(fp_arc
+		(start 2.05 1.3)
+		(mid 1.83033 1.83033)
+		(end 1.3 2.05)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "9ae5c11b-ff00-4394-8b16-5c07880e4066")
 	)
 	(fp_text user "${REFERENCE}"
 		(at 0 -2 0)
@@ -101,10 +163,11 @@
 			)
 		)
 	)
-	(pad "1" smd circle
-		(at 0 0.00228)
-		(size 2 2)
-		(layers "F.Cu" "F.Mask")
+	(pad "1" smd roundrect
+		(at 0 0)
+		(size 4 4)
+		(layers "F.Cu")
+		(roundrect_rratio 0.1875)
 		(uuid "fa9568dc-ea58-4bcd-9457-d6dcbb091034")
 	)
 	(embedded_fonts no)
