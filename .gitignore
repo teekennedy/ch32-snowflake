@@ -4,6 +4,7 @@
 # KiCad generated files
 *.lck
 *.kicad_*_old
+_autosave-*
 fp-info-cache
 fp-lib-table
 
