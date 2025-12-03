@@ -1,5 +1,7 @@
 # CH32 Snowflake
 
+![preview](./images/preview.png)
+
 A holiday snowflake with RGB LEDs, driven by the infamous CH32V003 microcontroller.
 
 This is my first ever PCB design, and I borrowed heavily from [ch32-fireplace](https://github.com/johanwheeler/ch32-fireplace/tree/main) for snippets of schematic and code.
