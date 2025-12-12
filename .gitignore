@@ -1,6 +1,9 @@
 
 *.dxf
 
+# Pixelmator source files for images under graphics
+*.pxd
+
 # KiCad generated files
 *.lck
 *.kicad_*_old
