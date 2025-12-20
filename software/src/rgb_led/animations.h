@@ -22,6 +22,5 @@ extern uint16_t phases[NUM_LEDS];
 // led_fn_t for rainbow animation
 uint32_t GetLEDRainbow(uint32_t ledno, uint32_t frame);
 uint32_t GetLEDTwinkle(uint32_t ledno, uint32_t frame);
-uint32_t ComputeLED(uint32_t ledno, uint32_t frame);
 
 #endif
