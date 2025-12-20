@@ -86,7 +86,7 @@ void buttons_init(){
 buttonPress_t buttons_read() {
     buttonPress_t read = buttonNone;
 
-    int thr = 20;
+    int thr = 19;
 
     for(int i=0; i<3; i++){
         int result1 = MeasureTouch(3, 2, GPIO_CFGLR_IN_FLOAT);

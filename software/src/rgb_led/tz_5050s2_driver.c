@@ -20,7 +20,7 @@ void RGBSend(GPIO_TypeDef * port, led_fn_t GetLED, uint32_t frame, uint32_t brig
 	port->BSHR = maskoff;
 
 	for (uint32_t ledno = 0; ledno < NUM_LEDS; ledno++) {
-		int32_t led_color = GetLED(ledno, frame);
+		int32_t led_color = (int32_t)GetLED(ledno, frame, brightness);
 
 		for (int remaining = BITS_PER_LED; remaining; remaining--) {
 			if( led_color < 0 )
@@ -43,4 +43,3 @@ void RGBSend(GPIO_TypeDef * port, led_fn_t GetLED, uint32_t frame, uint32_t brig
 	port->BSHR = maskoff;
 	Delay_Us(80U);
 }
-

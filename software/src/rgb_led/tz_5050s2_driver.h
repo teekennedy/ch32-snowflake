@@ -9,7 +9,7 @@
 #include "ch32fun.h"
 
 // Function to get the color of the given ledno
-typedef uint32_t (*led_fn_t)(uint32_t ledno, uint32_t frame);
+typedef uint32_t (*led_fn_t)(uint32_t ledno, uint32_t frame, uint32_t brightness);
 
 // Current animation frame
 extern uint32_t frame;
