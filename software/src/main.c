@@ -20,7 +20,8 @@ int main()
 
 	int frame = 0;
 	led_fn_t ledFuncs[] = {
-		GetLEDTwinkle,
+		GetLEDTwinkleIce,
+		GetLEDTwinkleRedGreen,
 		GetLEDRainbow,
 	};
 	const uint32_t ledFuncCount = sizeof(ledFuncs) / sizeof(ledFuncs[0]);
