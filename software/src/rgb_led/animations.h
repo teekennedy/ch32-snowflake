@@ -16,7 +16,7 @@
 #include <stdint.h>
 
 // led_fn_t for rainbow animation
-uint32_t GetLEDRainbow(uint32_t ledno, uint32_t frame, uint32_t brightness);
-uint32_t GetLEDTwinkle(uint32_t ledno, uint32_t frame, uint32_t brightness);
+uint32_t GetLEDRainbow(uint32_t ledno, uint32_t frame, uint8_t brightness);
+uint32_t GetLEDTwinkle(uint32_t ledno, uint32_t frame, uint8_t brightness);
 
 #endif

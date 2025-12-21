@@ -9,16 +9,10 @@
 #include "ch32fun.h"
 
 // Function to get the color of the given ledno
-typedef uint32_t (*led_fn_t)(uint32_t ledno, uint32_t frame, uint32_t brightness);
-
-// Current animation frame
-extern uint32_t frame;
-
-// Pointer to the led function for the current animation
-extern led_fn_t ledFunc;
+typedef uint32_t (*led_fn_t)(uint32_t ledno, uint32_t frame, uint8_t brightness);
 
 void RGBInit(int gpio_pin);
 
-void RGBSend(GPIO_TypeDef * port, led_fn_t GetLED, uint32_t frame, uint32_t brightness);
+void RGBSend(GPIO_TypeDef * port, led_fn_t GetLED, uint32_t frame, uint8_t brightness);
 
 #endif

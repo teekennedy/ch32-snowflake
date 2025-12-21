@@ -12,7 +12,7 @@ void RGBInit(int pin)
 	funPinMode(pin, GPIO_CFGLR_OUT_10Mhz_PP); // Set PIN_RGB to output
 }
 
-void RGBSend(GPIO_TypeDef * port, led_fn_t GetLED, uint32_t frame, uint32_t brightness)
+void RGBSend(GPIO_TypeDef * port, led_fn_t GetLED, uint32_t frame, uint8_t brightness)
 {
 	int maskon = 1<<PIN_RGB_NUM;
 	int maskoff = 1<<(16+PIN_RGB_NUM);

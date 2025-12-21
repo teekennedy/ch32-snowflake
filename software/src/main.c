@@ -3,9 +3,10 @@
 #include "tz_5050s2_driver.h"
 #include "animations.h"
 #include "touch.h"
+#include "nvram.h"
 
-int ledFuncIndex = 0;
-int ledBrightness = 2;
+uint8_t ledFuncIndex = 0;
+uint8_t ledBrightness = 3;
 bool shuffleOn = false;
 
 int main()
@@ -23,31 +24,51 @@ int main()
 		GetLEDRainbow,
 	};
 	const uint32_t ledFuncCount = sizeof(ledFuncs) / sizeof(ledFuncs[0]);
+	NvramSettings nvram_settings;
+	if (NvramLoadSettings(&nvram_settings)) {
+		ledBrightness = nvram_settings.led_brightness;
+		ledFuncIndex = nvram_settings.led_func_index % ledFuncCount;
+		shuffleOn = nvram_settings.shuffle_on;
+	}
 	buttonPress_t lastButton = buttonNone;
 	// uint32_t iteration = 1;
 	while(1)
 	{
 		// printf("Iteration: %lu\nFrame: %i\n", iteration, frame);
-		RGBSend(PORT_RGB, ledFuncs[ledFuncIndex], frame, ledBrightness);
+		RGBSend(PORT_RGB, ledFuncs[ledFuncIndex], frame, ledBrightness + 1);
 		frame++;
-		Delay_Ms(100);
+		Delay_Ms(75);
 		buttonPress_t button = buttons_read();
 		if (button != lastButton) {
 			lastButton = button;
 			// printf("Button pressed: %x", button);
+			bool settings_changed = false;
 			switch (button) {
 				case buttonNext:
 					ledFuncIndex++;
 					ledFuncIndex %= ledFuncCount;
+					settings_changed = true;
 					break;
 				case buttonShuffle:
 				    shuffleOn = !shuffleOn;
+				    settings_changed = true;
 				    break;
 				case buttonBrightness:
-				    ledBrightness++;
-				    ledBrightness %= 5;
+				    ledBrightness--;
+				    if (ledBrightness >= 4) {
+				    	ledBrightness = 3;
+				    }
+				    settings_changed = true;
 				default:
 					break;
+			}
+			if (settings_changed) {
+				NvramSettings new_settings = {
+					.led_brightness = ledBrightness,
+					.led_func_index = ledFuncIndex,
+					.shuffle_on = shuffleOn ? 1U : 0U,
+				};
+				NvramSaveSettings(&new_settings);
 			}
 		}
 	}
