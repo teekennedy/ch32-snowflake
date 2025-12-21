@@ -33,13 +33,12 @@ int main()
 		shuffleOn = nvram_settings.shuffle_on;
 	}
 	buttonPress_t lastButton = buttonNone;
-	// uint32_t iteration = 1;
+	const uint32_t frame_delay_ticks = 67U * DELAY_MS_TIME;
 	while(1)
 	{
-		// printf("Iteration: %lu\nFrame: %i\n", iteration, frame);
+		uint32_t targend = SysTick->CNT + frame_delay_ticks;
 		RGBSend(PORT_RGB, ledFuncs[ledFuncIndex], frame, ledBrightness + 1);
 		frame++;
-		Delay_Ms(75);
 		buttonPress_t button = buttons_read();
 		if (button != lastButton) {
 			lastButton = button;
@@ -72,6 +71,9 @@ int main()
 				};
 				NvramSaveSettings(&new_settings);
 			}
+		}
+		while (((int32_t)(SysTick->CNT - targend)) < 0) {
+			;
 		}
 	}
 }
