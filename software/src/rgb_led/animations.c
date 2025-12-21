@@ -69,3 +69,103 @@ uint32_t GetLEDTwinkleRedGreen(uint32_t ledno, uint32_t frame, uint8_t brightnes
 	uint32_t green = ((0xff - rsbase) >> 1) >> brightness;
 	return (green << 24) | (red << 16);
 }
+
+typedef struct {
+	uint8_t active;
+	uint8_t head;
+	uint8_t direction;
+	uint8_t fade;
+} StarState;
+
+static uint8_t Hash8(uint32_t value)
+{
+	value ^= value >> 7;
+	value ^= value << 9;
+	value ^= value >> 13;
+	return (uint8_t)value;
+}
+
+static void UpdateStar(uint8_t star_index, uint32_t frame, StarState * state)
+{
+	uint32_t cycle_len = NUM_LEDS + (star_index ? 11U : 7U);
+	uint32_t active_len = NUM_LEDS / 2U;
+	uint32_t cycle_index = frame / cycle_len;
+	uint32_t phase = frame % cycle_len;
+	uint8_t hash = Hash8(cycle_index + (uint32_t)(star_index * 53U));
+
+	state->direction = star_index ? 0U : 1U;
+
+	if ((hash & 0x3U) == 0U) {
+		state->active = 0U;
+		return;
+	}
+
+	uint8_t start_offset = (uint8_t)(hash % (cycle_len - active_len + 1U));
+	if (phase < start_offset || phase >= (uint32_t)start_offset + active_len) {
+		state->active = 0U;
+		return;
+	}
+
+	uint32_t travel = phase - start_offset;
+	uint8_t start_pos = Hash8((cycle_index * 11U) + (uint32_t)(star_index * 97U)) % NUM_LEDS;
+
+	if (state->direction) {
+		state->head = (uint8_t)((start_pos + travel) % NUM_LEDS);
+	} else {
+		state->head = (uint8_t)((start_pos + NUM_LEDS - travel) % NUM_LEDS);
+	}
+
+	if (active_len > 1U) {
+		uint8_t linear = (uint8_t)(((active_len - 1U - travel) * 255U) / (active_len - 1U));
+		uint16_t inv = 255U - linear;
+		state->fade = (uint8_t)(255U - ((inv * inv) / 255U));
+	} else {
+		state->fade = 0U;
+	}
+	state->active = 1U;
+}
+
+uint32_t GetLEDShootingStar(uint32_t ledno, uint32_t frame, uint8_t brightness)
+{
+	static const uint8_t trail[] = { 0xff, 0xb0, 0x70, 0x40, 0x20 };
+	static uint32_t last_frame = 0xffffffffU;
+	static StarState stars[2];
+	uint16_t intensity = 0;
+
+	if (frame != last_frame) {
+		UpdateStar(0U, frame, &stars[0]);
+		UpdateStar(1U, frame, &stars[1]);
+		last_frame = frame;
+	}
+
+	for (uint8_t i = 0; i < 2U; i++) {
+		if (!stars[i].active) {
+			continue;
+		}
+
+		uint32_t dist = stars[i].direction
+			? (stars[i].head + NUM_LEDS - ledno) % NUM_LEDS
+			: (ledno + NUM_LEDS - stars[i].head) % NUM_LEDS;
+
+		if (dist < sizeof(trail)) {
+			uint16_t level = trail[dist];
+			level = (level * stars[i].fade) / 255U;
+			if (level > intensity) {
+				intensity = level;
+			}
+		}
+	}
+
+	if (!intensity) {
+		return 0;
+	}
+
+	uint16_t red = intensity;
+	uint16_t green = intensity;
+	uint16_t blue = intensity;
+
+	red >>= brightness;
+	green >>= brightness;
+	blue >>= brightness;
+	return ((uint32_t)green << 24) | ((uint32_t)red << 16) | ((uint32_t)blue << 8);
+}
