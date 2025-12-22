@@ -56,6 +56,16 @@ uint32_t GetLEDRainbow(uint32_t ledno, uint32_t frame, uint8_t brightness) {
 	return ChaseSequence(rainbow, sizeof(rainbow), ledno, frame, brightness);
 }
 
+uint32_t GetLEDChristmasLights(uint32_t ledno, uint32_t frame, uint8_t brightness) {
+	const uint8_t lights[] = {
+		0xff, 0x00, 0x00, // green
+		0x00, 0x00, 0xff, // blue
+		0xff, 0xff, 0x00, // yellow
+		0x00, 0xff, 0x00, // red
+	};
+	return ChaseSequence(lights, sizeof(lights), ledno, frame >> 3, brightness);
+}
+
 uint32_t GetLEDShuffleOn(uint32_t ledno, uint32_t frame, uint8_t brightness) {
 	const uint8_t on[] = {0xff, 0x00, 0x00};
 	return ChaseSequence(on, sizeof(on), ledno, frame, brightness);

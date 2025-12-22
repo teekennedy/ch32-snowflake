@@ -21,6 +21,7 @@ int main()
 
 	int frame = 0;
 	led_fn_t ledFuncs[] = {
+		GetLEDChristmasLights,
 		GetLEDTwinkleIce,
 		GetLEDTwinkleRedGreen,
 		GetLEDShootingStar,
