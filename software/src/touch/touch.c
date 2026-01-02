@@ -76,35 +76,94 @@ int MeasureTouch(int portno, int pin, int pu_mode)
     return endtime - starttime;
 }
 
+#ifndef TOUCH_DEBUG
+#define TOUCH_DEBUG 0
+#endif
+
+#if TOUCH_DEBUG
+#include <stdio.h>
+#endif
+
+#define TOUCH_PAD_COUNT 3
+#define TOUCH_BASELINE_SAMPLES 32
+#define TOUCH_THRESHOLD_OFFSET 6
+
+static const uint8_t touch_ports[TOUCH_PAD_COUNT] = { 3, 3, 3 };
+static const uint8_t touch_pins[TOUCH_PAD_COUNT] = { 2, 3, 4 };
+static const buttonPress_t touch_buttons[TOUCH_PAD_COUNT] = {
+    buttonNext,
+    buttonShuffle,
+    buttonBrightness,
+};
+
+static uint16_t touch_baseline[TOUCH_PAD_COUNT];
+
+static uint16_t Median3(uint16_t a, uint16_t b, uint16_t c)
+{
+    if (a > b) {
+        uint16_t tmp = a;
+        a = b;
+        b = tmp;
+    }
+    if (b > c) {
+        uint16_t tmp = b;
+        b = c;
+        c = tmp;
+    }
+    if (a > b) {
+        uint16_t tmp = a;
+        a = b;
+        b = tmp;
+    }
+    return b;
+}
+
+static void TouchCalibrate(void)
+{
+    for (int pad = 0; pad < TOUCH_PAD_COUNT; pad++) {
+        uint32_t sum = 0;
+        for (int sample = 0; sample < TOUCH_BASELINE_SAMPLES; sample++) {
+            sum += MeasureTouch(touch_ports[pad], touch_pins[pad], GPIO_CFGLR_IN_FLOAT);
+        }
+        touch_baseline[pad] = (uint16_t)(sum / TOUCH_BASELINE_SAMPLES);
+    }
+}
+
 void buttons_init(){
     RCC->APB2PCENR |= RCC_APB2Periph_GPIOD | RCC_APB2Periph_AFIO;
 
     // enable pin-change-interrupt.
     NVIC_EnableIRQ(EXTI7_0_IRQn);
+
+    Delay_Ms(20);
+    TouchCalibrate();
 }
 
 buttonPress_t buttons_read() {
     buttonPress_t read = buttonNone;
+    uint16_t values[TOUCH_PAD_COUNT];
 
-    int thr = 19;
-
-    for(int i=0; i<3; i++){
-        int result1 = MeasureTouch(3, 2, GPIO_CFGLR_IN_FLOAT);
-
-        if(result1 > thr){
-            read |= buttonNext;
-        }
-        int result2 = MeasureTouch(3, 3, GPIO_CFGLR_IN_FLOAT);
-        if (result2 > thr)
-        {
-            read |= buttonShuffle;
-        }
-        int result3 = MeasureTouch(3, 4, GPIO_CFGLR_IN_FLOAT);
-        if(result3 > thr){
-            read |= buttonBrightness;
+    for (int pad = 0; pad < TOUCH_PAD_COUNT; pad++) {
+        uint16_t a = MeasureTouch(touch_ports[pad], touch_pins[pad], GPIO_CFGLR_IN_FLOAT);
+        uint16_t b = MeasureTouch(touch_ports[pad], touch_pins[pad], GPIO_CFGLR_IN_FLOAT);
+        uint16_t c = MeasureTouch(touch_ports[pad], touch_pins[pad], GPIO_CFGLR_IN_FLOAT);
+        values[pad] = Median3(a, b, c);
+        uint16_t threshold = touch_baseline[pad] + TOUCH_THRESHOLD_OFFSET;
+        if (values[pad] >= threshold) {
+            read |= touch_buttons[pad];
         }
     }
 
+#if TOUCH_DEBUG
+    static uint32_t next_debug = 0;
+    uint32_t now = SysTick->CNT;
+    if (((int32_t)(now - next_debug)) >= 0) {
+        printf("touch raw: %u %u %u base: %u %u %u\n",
+               values[0], values[1], values[2],
+               touch_baseline[0], touch_baseline[1], touch_baseline[2]);
+        next_debug = now + (DELAY_MS_TIME * 200U);
+    }
+#endif
+
     return read;
 }
-
