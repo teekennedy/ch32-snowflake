@@ -67,13 +67,17 @@ uint32_t GetLEDChristmasLights(uint32_t ledno, uint32_t frame, uint8_t brightnes
 }
 
 uint32_t GetLEDShuffleOn(uint32_t ledno, uint32_t frame, uint8_t brightness) {
-	const uint8_t on[] = {0xff, 0x00, 0x00};
-	return ChaseSequence(on, sizeof(on), ledno, frame, brightness);
+	const uint8_t green[] = {0xff, 0x00, 0x00};
+	return ChaseSequence(green, sizeof(green), ledno, frame, brightness);
 }
 
 uint32_t GetLEDShuffleOff(uint32_t ledno, uint32_t frame, uint8_t brightness) {
-	const uint8_t off[] = {0x00, 0xff, 0x00};
-	return ChaseSequence(off, sizeof(off), ledno, frame, brightness);
+	const uint8_t red[] = {0x00, 0xff, 0x00};
+	return ChaseSequence(red, sizeof(red), ledno, frame, brightness);
+}
+
+uint32_t GetLEDAllOff(uint32_t ledno, uint32_t frame, uint8_t brightness) {
+  return 0;
 }
 
 uint32_t GetLEDTwinkleIce(uint32_t ledno, uint32_t frame, uint8_t brightness)

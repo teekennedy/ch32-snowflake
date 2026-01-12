@@ -23,4 +23,9 @@ uint32_t GetLEDShootingStar(uint32_t ledno, uint32_t frame, uint8_t brightness);
 uint32_t GetLEDShuffleOn(uint32_t ledno, uint32_t frame, uint8_t brightness);
 uint32_t GetLEDShuffleOff(uint32_t ledno, uint32_t frame, uint8_t brightness);
 
+// GetLEDAllOff turns off all LEDs for a "null" animation.
+// Useful to test the power draw of non-LED components.
+uint32_t GetLEDAllOff(uint32_t ledno, uint32_t frame, uint8_t brightness);
+
+
 #endif

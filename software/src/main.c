@@ -26,6 +26,7 @@ int main()
 		GetLEDTwinkleRedGreen,
 		GetLEDShootingStar,
 		GetLEDRainbow,
+		// GetLEDAllOff,
 	};
 	const uint32_t ledFuncCount = sizeof(ledFuncs) / sizeof(ledFuncs[0]);
 	NvramSettings nvram_settings;
@@ -47,7 +48,7 @@ int main()
 			ledFuncIndex = (uint8_t)((ledFuncIndex + 1U) % ledFuncCount);
 			shuffle_deadline = frame_start + shuffle_interval_ticks;
 		}
-		RGBSend(PORT_RGB, ledFuncs[ledFuncIndex], frame, ledBrightness + 1);
+		RGBSend(PORT_RGB, ledFuncs[ledFuncIndex], frame, ledBrightness + 2);
 		frame++;
 		buttonPress_t button = buttons_read();
 		if (button != lastButton) {
