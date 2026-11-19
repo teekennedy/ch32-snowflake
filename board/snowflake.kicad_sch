@@ -8259,7 +8259,7 @@
 			(uuid "24b6afc7-8b82-4075-b6e3-65347f8da123")
 		)
 		(instances
-			(project ""
+			(project "snowflake"
 				(path "/40481058-4523-4575-8fee-da98fa47c16e"
 					(reference "#PWR079")
 					(unit 1)
@@ -9250,7 +9250,7 @@
 			(uuid "09594ebc-0e3d-4670-8ecb-7d9c981c8b67")
 		)
 		(instances
-			(project ""
+			(project "snowflake"
 				(path "/40481058-4523-4575-8fee-da98fa47c16e"
 					(reference "U25")
 					(unit 1)
@@ -10187,7 +10187,7 @@
 		(at 176.53 262.89 270)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "566c04be-a03f-4242-8da4-ac4ac2d86ac2")
@@ -10823,7 +10823,7 @@
 			(uuid "dd7f6fdf-932c-4480-9d62-7cb52918ae97")
 		)
 		(instances
-			(project ""
+			(project "snowflake"
 				(path "/40481058-4523-4575-8fee-da98fa47c16e"
 					(reference "#PWR010")
 					(unit 1)
@@ -10902,7 +10902,7 @@
 		(at 130.81 228.6 180)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -10960,7 +10960,7 @@
 			(uuid "40d96f60-f1fe-474f-b4aa-b20eeec01a3e")
 		)
 		(instances
-			(project ""
+			(project "snowflake"
 				(path "/40481058-4523-4575-8fee-da98fa47c16e"
 					(reference "J1")
 					(unit 1)
@@ -11104,7 +11104,7 @@
 		(at 176.53 267.97 270)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "6d343d8c-b0fe-4ef4-9db8-b04b95b71a55")
@@ -11573,7 +11573,7 @@
 			(uuid "57f4bb32-0779-40c8-a200-6586935a50bf")
 		)
 		(instances
-			(project ""
+			(project "snowflake"
 				(path "/40481058-4523-4575-8fee-da98fa47c16e"
 					(reference "R1")
 					(unit 1)
@@ -11979,7 +11979,7 @@
 			(uuid "76fc2637-9a92-4a33-85bf-b183678e0b53")
 		)
 		(instances
-			(project ""
+			(project "snowflake"
 				(path "/40481058-4523-4575-8fee-da98fa47c16e"
 					(reference "C1")
 					(unit 1)
@@ -12438,7 +12438,7 @@
 			(uuid "57f4bb32-0779-40c8-a200-6586935a50c0")
 		)
 		(instances
-			(project ""
+			(project "snowflake"
 				(path "/40481058-4523-4575-8fee-da98fa47c16e"
 					(reference "R2")
 					(unit 1)
@@ -12838,7 +12838,7 @@
 		(at 176.53 265.43 270)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "937701e6-f35b-49ac-bf55-f7c9d02f3ec7")
@@ -13719,7 +13719,7 @@
 			(uuid "dafd1d3e-f70c-4e5f-a97c-098b95144933")
 		)
 		(instances
-			(project ""
+			(project "snowflake"
 				(path "/40481058-4523-4575-8fee-da98fa47c16e"
 					(reference "L1")
 					(unit 1)
@@ -14088,7 +14088,7 @@
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "bba4765d-0b93-4516-9de9-4f5a12cf873b")
@@ -14194,7 +14194,7 @@
 			(uuid "e4714914-63bb-4598-885a-3074096d5bb9")
 		)
 		(instances
-			(project ""
+			(project "snowflake"
 				(path "/40481058-4523-4575-8fee-da98fa47c16e"
 					(reference "S1")
 					(unit 1)
@@ -15195,7 +15195,7 @@
 			(uuid "9635ed03-5213-4ee9-9b58-b5c4207eb0fe")
 		)
 		(instances
-			(project ""
+			(project "snowflake"
 				(path "/40481058-4523-4575-8fee-da98fa47c16e"
 					(reference "#PWR01")
 					(unit 1)
@@ -16567,7 +16567,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
-		(on_board no)
+		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e2118af0-cca9-4b59-854c-40aa02497566")
@@ -16639,7 +16639,7 @@
 			(uuid "c9d1e8c0-0850-4ced-a197-980801ddfa27")
 		)
 		(instances
-			(project ""
+			(project "snowflake"
 				(path "/40481058-4523-4575-8fee-da98fa47c16e"
 					(reference "BAT1")
 					(unit 1)
@@ -17123,7 +17123,7 @@
 			(uuid "34563c15-292a-4bff-bcf1-b3dc2a379475")
 		)
 		(instances
-			(project ""
+			(project "snowflake"
 				(path "/40481058-4523-4575-8fee-da98fa47c16e"
 					(reference "#PWR04")
 					(unit 1)
@@ -17566,7 +17566,7 @@
 			(uuid "bd78e1cc-b546-4efd-966c-2a2be0052ff3")
 		)
 		(instances
-			(project ""
+			(project "snowflake"
 				(path "/40481058-4523-4575-8fee-da98fa47c16e"
 					(reference "C26")
 					(unit 1)
@@ -18284,7 +18284,7 @@
 			(uuid "23f79275-2058-44c5-be18-e001d7a77fad")
 		)
 		(instances
-			(project ""
+			(project "snowflake"
 				(path "/40481058-4523-4575-8fee-da98fa47c16e"
 					(reference "U1")
 					(unit 1)
