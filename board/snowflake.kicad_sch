@@ -3170,16 +3170,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "DATASHEET_URL" "https://s3.amazonaws.com/snapeda/datasheet/SWS045-030R22TSK_Global_Connector_Technology.pdf"
+			(property "Description" "8.60mm x 6.90mm x 4.70mm Through Hole Slide Switch"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3189,7 +3180,7 @@
 					(hide yes)
 				)
 			)
-			(property "DESCRIPTION" "8.60mm x 6.90mm x 4.70mm Through Hole Slide Switch"
+			(property "DATASHEET_URL" "https://s3.amazonaws.com/snapeda/datasheet/SWS045-030R22TSK_Global_Connector_Technology.pdf"
 				(at 0 0 0)
 				(effects
 					(font
@@ -5321,7 +5312,7 @@
 	)
 	(wire
 		(pts
-			(xy 30.48 267.97) (xy 30.48 271.78)
+			(xy 30.48 267.97) (xy 30.48 270.51)
 		)
 		(stroke
 			(width 0)
@@ -5688,6 +5679,16 @@
 			(type default)
 		)
 		(uuid "86369ae2-4461-4f37-96d7-3be9a680d055")
+	)
+	(wire
+		(pts
+			(xy 40.64 262.89) (xy 43.18 262.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8793adbb-5919-4ac8-a02f-29e3957f7957")
 	)
 	(wire
 		(pts
@@ -6691,6 +6692,16 @@
 	)
 	(wire
 		(pts
+			(xy 43.18 262.89) (xy 43.18 264.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cf11a10d-cf13-4190-96e7-d03139515518")
+	)
+	(wire
+		(pts
 			(xy 203.2 87.63) (xy 203.2 91.44)
 		)
 		(stroke
@@ -7041,7 +7052,7 @@
 	)
 	(wire
 		(pts
-			(xy 30.48 245.11) (xy 30.48 247.65)
+			(xy 30.48 246.38) (xy 30.48 247.65)
 		)
 		(stroke
 			(width 0)
@@ -7228,16 +7239,6 @@
 			(type default)
 		)
 		(uuid "f96488a5-d476-4777-8728-8c880598510b")
-	)
-	(wire
-		(pts
-			(xy 40.64 262.89) (xy 46.99 262.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f966dc43-4f7b-4618-aa87-c94b214a00a9")
 	)
 	(wire
 		(pts
@@ -11511,7 +11512,7 @@
 		(uuid "39858beb-bac1-4fb8-a91c-bc7e4305af1b")
 	)
 	(label "SWIO"
-		(at 46.99 262.89 180)
+		(at 30.48 246.38 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11531,7 +11532,7 @@
 		(uuid "4bb48cc5-c48b-42e8-b85f-430e58e1adf0")
 	)
 	(label "RX"
-		(at 44.45 257.81 180)
+		(at 44.45 260.35 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11631,7 +11632,7 @@
 		(uuid "e4572166-9f0a-4731-b4ec-009d0924cee1")
 	)
 	(label "TX"
-		(at 44.45 260.35 180)
+		(at 44.45 257.81 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -12401,7 +12402,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 30.48 271.78 0)
+		(at 43.18 264.16 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12410,7 +12411,7 @@
 		(fields_autoplaced yes)
 		(uuid "10997e29-093d-4ef7-943b-bba026cc89ea")
 		(property "Reference" "#PWR0203"
-			(at 30.48 278.13 0)
+			(at 43.18 270.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12419,7 +12420,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 30.48 276.86 0)
+			(at 43.18 269.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12427,7 +12428,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 30.48 271.78 0)
+			(at 43.18 264.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12436,7 +12437,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 30.48 271.78 0)
+			(at 43.18 264.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12445,7 +12446,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 30.48 271.78 0)
+			(at 43.18 264.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20978,16 +20979,16 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 30.48 245.11 0)
+		(at 30.48 270.51 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "d407baaf-0896-4d5a-87c3-289293d0a773")
 		(property "Reference" "#PWR0201"
-			(at 30.48 248.92 0)
+			(at 30.48 266.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20996,7 +20997,7 @@
 			)
 		)
 		(property "Value" "Vdd"
-			(at 30.48 240.03 0)
+			(at 30.48 275.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21004,7 +21005,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 30.48 245.11 0)
+			(at 30.48 270.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21013,7 +21014,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 30.48 245.11 0)
+			(at 30.48 270.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21022,7 +21023,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 30.48 245.11 0)
+			(at 30.48 270.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
