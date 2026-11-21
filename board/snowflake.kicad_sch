@@ -3787,6 +3787,12 @@
 		(uuid "3d38f4ff-f33d-47d5-8043-981413d44ed3")
 	)
 	(junction
+		(at 133.35 34.29)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3e10b26a-6ff6-452b-b9e3-da6a0102d51d")
+	)
+	(junction
 		(at 256.54 123.19)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3845,6 +3851,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6fe48103-e479-4205-8ea0-b1b4576f1bf6")
+	)
+	(junction
+		(at 119.38 34.29)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "728b7abf-81c7-4a82-8c05-be617612abbb")
 	)
 	(junction
 		(at 147.32 48.26)
@@ -4612,6 +4624,16 @@
 	)
 	(wire
 		(pts
+			(xy 119.38 29.21) (xy 123.19 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "36ad96b5-c920-4a56-922a-566b98744530")
+	)
+	(wire
+		(pts
 			(xy 176.53 267.97) (xy 172.72 267.97)
 		)
 		(stroke
@@ -5252,6 +5274,16 @@
 	)
 	(wire
 		(pts
+			(xy 130.81 29.21) (xy 133.35 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "642d1ea2-2748-4665-bd48-1e7ab7232060")
+	)
+	(wire
+		(pts
 			(xy 96.52 125.73) (xy 100.33 125.73)
 		)
 		(stroke
@@ -5359,6 +5391,16 @@
 			(type default)
 		)
 		(uuid "6e2b8733-2c98-4bbe-9f57-825afb5e9507")
+	)
+	(wire
+		(pts
+			(xy 133.35 29.21) (xy 133.35 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6ebfe357-ad6b-44da-8851-9318835fb15c")
 	)
 	(wire
 		(pts
@@ -5859,6 +5901,16 @@
 			(type default)
 		)
 		(uuid "91a5b0ba-5962-4a85-93c2-5cd64399d3cb")
+	)
+	(wire
+		(pts
+			(xy 119.38 29.21) (xy 119.38 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "91b5d680-c809-459c-ad4b-ccc686a997a4")
 	)
 	(wire
 		(pts
@@ -11667,7 +11719,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 184.4548 34.29 0)
 			(effects
 				(font
@@ -11694,7 +11746,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C19702"
+		(property "LCSC" "C15525"
 			(at 185.42 30.48 90)
 			(effects
 				(font
@@ -18637,6 +18689,83 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 127 29.21 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b7696c79-53df-4cc7-bec0-b893b343454c")
+		(property "Reference" "C28"
+			(at 130.048 27.432 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "22uF"
+			(at 123.19 27.432 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 123.19 28.2448 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 127 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 127 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C45783"
+			(at 127 29.21 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "de8ed952-e309-4c93-896e-62f0315c5cb4")
+		)
+		(pin "2"
+			(uuid "b21740ce-02a1-4d0a-b714-36f47f826cb6")
+		)
+		(instances
+			(project "snowflake"
+				(path "/40481058-4523-4575-8fee-da98fa47c16e"
+					(reference "C28")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 119.38 234.95 0)
 		(unit 1)
@@ -18886,7 +19015,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "SWS045-030R22TSK_REVA:SW_SWS045-030R22TSK_REVA"
+		(property "Footprint" "snowflake:SW_SWS045-030R22TSK_REVA"
 			(at 76.2 39.37 0)
 			(effects
 				(font
@@ -20000,7 +20129,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 123.19 33.3248 0)
 			(effects
 				(font
@@ -20027,7 +20156,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C59461"
+		(property "LCSC" "C45783"
 			(at 127 34.29 90)
 			(effects
 				(font
@@ -22515,7 +22644,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 123.19 38.4048 0)
 			(effects
 				(font
@@ -22542,7 +22671,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C59461"
+		(property "LCSC" "C45783"
 			(at 127 39.37 90)
 			(effects
 				(font
