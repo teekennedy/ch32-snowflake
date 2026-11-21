@@ -5850,7 +5850,6 @@
 			)
 		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
-		(path "/67c5c5b2-dba2-45eb-944f-d3b6cb2965a0")
 		(sheetname "/")
 		(sheetfile "snowflake.kicad_sch")
 		(attr through_hole exclude_from_pos_files exclude_from_bom)
@@ -19128,7 +19127,7 @@
 		(path "/e2118af0-cca9-4b59-854c-40aa02497566")
 		(sheetname "/")
 		(sheetfile "snowflake.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -29.4 16.4)
 			(end -29.4 14.1)
@@ -37551,7 +37550,7 @@
 		(uuid "c7cef356-56a1-082b-09cb-e1a6a0ccc15f")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30002)
+		(priority 30000)
 		(attr
 			(teardrop
 				(type padvia)
@@ -37577,10 +37576,8 @@
 		(filled_polygon
 			(layer "F.Cu")
 			(pts
-				(xy 157.500157 175.518798) (xy 157.502842 175.52297) (xy 158.029808 176.931052) (xy 158.029498 176.940002)
-				(xy 158.022951 176.946111) (xy 158.021147 176.946625) (xy 157.252296 177.100538) (xy 157.247702 177.100538)
-				(xy 156.47885 176.946625) (xy 156.471411 176.941641) (xy 156.469675 176.932856) (xy 156.470189 176.931052)
-				(xy 156.997156 175.52297) (xy 157.003265 175.516423) (xy 157.008113 175.515371) (xy 157.491886 175.515371)
+				(xy 157.499999 175.515372) (xy 157 175.515371) (xy 156.465371 176.943927) (xy 157.249999 177.100998)
+				(xy 158.034627 176.943927)
 			)
 		)
 	)

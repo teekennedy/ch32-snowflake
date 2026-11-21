@@ -3467,16 +3467,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "DATASHEET_URL" "https://s3.amazonaws.com/snapeda/datasheet/SWS045-030R22TSK_Global_Connector_Technology.pdf"
+			(property "Description" "8.60mm x 6.90mm x 4.70mm Through Hole Slide Switch"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3486,7 +3477,7 @@
 					(hide yes)
 				)
 			)
-			(property "DESCRIPTION" "8.60mm x 6.90mm x 4.70mm Through Hole Slide Switch"
+			(property "DATASHEET_URL" "https://s3.amazonaws.com/snapeda/datasheet/SWS045-030R22TSK_Global_Connector_Technology.pdf"
 				(at 0 0 0)
 				(effects
 					(font
@@ -16432,7 +16423,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "67c5c5b2-dba2-45eb-944f-d3b6cb2965a0")
@@ -22826,7 +22817,7 @@
 		(at 34.29 24.13 180)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "e2118af0-cca9-4b59-854c-40aa02497566")
