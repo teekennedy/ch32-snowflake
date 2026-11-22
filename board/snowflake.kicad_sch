@@ -1605,7 +1605,7 @@
 					)
 				)
 			)
-			(property "Footprint" "easyeda2kicad:BAT-TH_2P-P14.50_2462"
+			(property "Footprint" "snowflake:BAT-TH_2P-P14.50_2462"
 				(at 0 -7.62 0)
 				(effects
 					(font
@@ -16326,7 +16326,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
-		(on_board no)
+		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "67c5c5b2-dba2-45eb-944f-d3b6cb2965a0")
@@ -22741,7 +22741,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "easyeda2kicad:BAT-TH_2P-P14.50_2462"
+		(property "Footprint" "snowflake:BAT-TH_2P-P14.50_2462"
 			(at 34.29 16.51 0)
 			(effects
 				(font

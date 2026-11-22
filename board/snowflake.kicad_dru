@@ -13,11 +13,9 @@
 # Inner diameter of pad should be 0.4-0.5 mm larger than NPTH drill diameter.
 # JLCPCB: "We make NPTH via dry sealing film process, if customer would like a NPTH but around with pad/copper, our engineer will dig out around pad/copper about 0.2mm-0.25mm, otherwise the metal potion will be flowed into the hole and it becomes a PTH. (there will be no copper dig out optimization for single board)."
 
-# TODO: new rule for plated slots: min diameter/width 0.5mm
-# JLCPCB: "The minimum plated slot width is 0.5mm, which is drawn with a pad."
-
-# TODO new rule: non-plated slots: min diameter/width 1.0mm
-# JLCPCB: "The minimum Non-Plated Slot Width is 1.0mm, please draw the slot outline in the mechanical layer(GML or GKO)""
+# Thresholds below follow JLCDFM (jlcdfm.com) "Danger" alert values where they
+# are stricter than the published capabilities page, so a DRC-clean board
+# should show no red items in JLCDFM.
 
 (rule "Track width, outer layer (1oz copper)"
 	(layer outer)
@@ -25,10 +23,13 @@
 	(constraint track_width (min 0.127mm))
 )
 
+# JLCPCB can do 0.127mm, but JLCDFM "Trace spacing" warns below 0.15mm.
+# Note this rule takes precedence over the netclass clearance and the Board
+# Setup minimum clearance, so the router uses this value for track-to-track.
 (rule "Track spacing, outer layer (1oz copper)"
 	(layer outer)
 	(condition "A.Type == 'track' && B.Type == A.Type")
-	(constraint clearance (min 0.127mm))
+	(constraint clearance (min 0.15mm))
 )
 
 (rule "Track width, inner layer"
@@ -54,6 +55,14 @@
 # JLCPCB clips silkscreen off exposed copper during CAM, and Gerbers are
 # plotted with "Subtract soldermask from silkscreen", so 0.09mm is enough to
 # catch real overlaps without flagging every library footprint.
+# Stock KiCad / easyeda2kicad footprints keep silk ~0.10-0.12mm from pads.
+# JLCPCB clips silkscreen off exposed copper during CAM, and Gerbers are
+# plotted with "Subtract soldermask from silkscreen", so 0.09mm is enough to
+# catch real overlaps without flagging every library footprint.
+# JLCDFM "Silkscreen to pad" (Danger < 0.13mm, capabilities page 0.15mm) will
+# still show these as red; that is accepted, since the only effect is JLC
+# trimming the silk. Customizing the footprints to pass instead causes
+# library-mismatch warnings.
 (rule "Pad to Silkscreen"
 	(layer outer)
 	(condition "A.Type == 'pad' && B.Layer == '?.Silkscreen'")
@@ -81,12 +90,25 @@
 #	(constraint edge_clearance (min 0.4mm))
 #)
 
-# JLCPCB restrictions ambiguous:
-# Illustration: 0.2 mm, 1&2 layer: 0.3 mm, multilayer: "(0.15mm more costly)"
+# JLCPCB: 1&2 layer boards: 0.3mm minimum drill (0.2mm/0.15mm is multilayer only).
 # This rule handles diameter minimum and maximum for ALL holes.
-# Other specialized rules handle restrictions (e.g. Via, PTH, NPTH) 
+# Other specialized rules handle restrictions (e.g. Via, PTH, NPTH, slots)
 (rule "Hole diameter"
-	(constraint hole_size (min 0.2mm) (max 6.3mm))
+	(constraint hole_size (min 0.3mm) (max 6.3mm))
+)
+
+# For slots, hole_size min is checked against the slot width (minor axis).
+# JLCPCB capabilities say 0.5mm min plated slot width, but JLCDFM "Slot width
+# check" flags < 0.61mm as Danger and < 0.81mm as Warning.
+(rule "Plated slot width"
+	(condition "A.isPlated() && A.Hole_Size_X != A.Hole_Size_Y")
+	(constraint hole_size (min 0.61mm) (max 6.3mm))
+)
+
+# JLCPCB: "The minimum Non-Plated Slot Width is 1.0mm"
+(rule "Non-plated slot width"
+	(condition "!A.isPlated() && A.Hole_Size_X != A.Hole_Size_Y")
+	(constraint hole_size (min 1.0mm) (max 6.3mm))
 )
 
 (rule "Hole (NPTH) diameter"
@@ -104,10 +126,32 @@
 
 # JLCPCB: "Via diameter should be 0.1mm(0.15mm preferred) larger than Via hole size" (illustration shows diameters for both dimensions)
 # JLCPCB: PTH: "The annular ring size will be enlarged to 0.15mm in production."
+# JLCDFM "Annular ring": Danger < 0.1mm, Warning <= 0.15mm (a 0.3/0.6mm via
+# sits right at the warning line).
 (rule "Annular ring width (via and PTH)"
 	(layer outer)
 	(condition "A.isPlated()")
-	(constraint annular_width (min 0.075mm))
+	(constraint annular_width (min 0.1mm))
+)
+
+# JLCDFM "Via placed within a pad" / SMT "Lead to hole distance" (Danger
+# < 0.2mm, Warning < 0.25mm): a drill in or near an SMD pad wicks solder away
+# from the joint. physical_hole_clearance applies regardless of net, so this
+# also catches same-net vias in exposed pads. Warning only, since an
+# intentional thermal via is sometimes worth the trade-off.
+(rule "Via hole to SMD pad (solder wicking)"
+	(condition "A.Type == 'Via' && B.Type == 'Pad' && B.Pad_Type == 'SMD'")
+	(constraint physical_hole_clearance (min 0.2mm))
+	(severity warning)
+)
+
+# The CH32V003 datasheet recommends a solid ground under the chip (matters for
+# ADC/touch sensing), so the GND via in U26's exposed pad (pad 21) is
+# intentional. Only the exposed pad is exempt; vias near signal pads still warn.
+(rule "CH32V003 exposed pad ground via"
+	(condition "A.Type == 'Via' && B.memberOfFootprint('U26') && B.Pad_Number == '21'")
+	(constraint physical_hole_clearance (min 0mm))
+	(severity ignore)
 )
 
 (rule "Clearance: hole to hole (perimeter), different nets"
@@ -155,4 +199,26 @@
 (rule "TPS61023 fine pitch"
 	(condition "A.memberOfFootprint('U25')")
 	(constraint clearance (min 0.15mm))
+)
+
+# U26 (CH32V003F4U6, QFN-20 0.4mm pitch) pads were widened from 0.2mm to
+# 0.25mm (and lengthened to 0.8mm) so the pads are larger than the leads;
+# JLCDFM flagged the original lead-sized pads under "Pin inner/left/right
+# edge". That leaves 0.15mm between adjacent pads.
+(rule "CH32V003 fine pitch"
+	(condition "A.memberOfFootprint('U26')")
+	(constraint clearance (min 0.15mm))
+)
+
+# JLCDFM "tht to smd" wants 2mm between through-hole and SMD pads, which is for
+# JLC's own THT soldering. Through-hole parts here are hand soldered, so 1mm is
+# enough room for an iron without disturbing nearby reflowed parts.
+# Through-hole pads have copper on both sides, so this covers parts mounted on
+# either side. J2 (USB-C) is excluded: its SMD signal pads sit next to its
+# own shell pins by design. (KiCad has no "different footprint" condition, so
+# it is excluded by reference.)
+(rule "Through-hole pad to SMD pad (hand soldering)"
+	(condition "A.Type == 'Pad' && A.Pad_Type == 'Through-hole' && B.Type == 'Pad' && B.Pad_Type == 'SMD' && !(A.memberOfFootprint('J2') && B.memberOfFootprint('J2'))")
+	(constraint physical_clearance (min 1mm))
+	(severity warning)
 )
