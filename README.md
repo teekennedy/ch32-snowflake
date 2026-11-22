@@ -20,6 +20,31 @@ It has corrections for both the CH32V003 (90 degrees CCW rotation) and the TPS61
 I did my best to choose Basic parts where possible, to help keep the cost of the economic PCB assembly down.
 Then I went with an ENIG coating and couldn't use economic PCBA anyway. Oh well.
 
+## Panel (Edge Rails)
+
+[snowflake-panel.kicad_pcb](./board/snowflake-panel.kicad_pcb) panelizes the snowflake PCB with breakaway edge rails.
+It's generated using [make_panel.py](./board/tools/make_panel.py), which takes [snowflake.kicad_pcb](./board/snowflake.kicad_pcb) as input.
+Re-run the script to update the panel after changing the board:
+
+```sh
+cd board
+uv run tools/make_panel.py   # or just ./tools/make_panel.py
+```
+
+The script declares its dependencies inline, so [uv](https://docs.astral.sh/uv/) installs them on the fly.
+It then refills the copper zones using KiCad's bundled Python, found at the default macOS install path (set `KICAD_PYTHON` to point elsewhere).
+
+How the panel is built:
+
+- Start with a rectangle that is as tall and wide as the snowflake and add 5 mm rails on the left and right. Take the edge cut of the snowflake, grow the outline by 2 mm, then subtract it from the rectangle.
+- Add 12 tabs to connect the edge rail sections to the panel with mouse bites.
+  The tabs meet the snowflake at similar angles for easier removal.
+- The mouse-bite holes sit just outside the snowflake's edge so that after removal they can be filed flush for a flawless finish.
+- JLCPCB tooling holes and fiducials in the rail corners.
+  Everything the script adds is excluded from the BOM and pick-and-place files, so those don't change.
+
+Generate the fabrication files from the panel, and choose "Panel by Customer" when ordering.
+
 ## Firmware
 
 In order to flash the firmware, you need to setup your build environment for [ch32fun](https://github.com/cnlohr/ch32fun).
