@@ -12061,7 +12061,7 @@
 		(uuid "35ae8f52-2bb6-4f6b-b052-1db015b7c10d")
 	)
 	(label "TOUCH1"
-		(at 96.52 252.73 0)
+		(at 96.52 257.81 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -12191,7 +12191,7 @@
 		(uuid "da54e38a-8d3a-4893-b8c8-d9eebdea5c01")
 	)
 	(label "TOUCH3"
-		(at 96.52 257.81 0)
+		(at 96.52 252.73 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -15402,7 +15402,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "snowflake:TouchPad"
+		(property "Footprint" "snowflake:TouchPad_Next"
 			(at 163.83 267.97 0)
 			(effects
 				(font
@@ -16648,7 +16648,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "snowflake:TouchPad"
+		(property "Footprint" "snowflake:TouchPad_Brightness"
 			(at 163.83 273.05 0)
 			(effects
 				(font
@@ -18449,7 +18449,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "snowflake:TouchPad"
+		(property "Footprint" "snowflake:TouchPad_Loop"
 			(at 163.83 270.51 0)
 			(effects
 				(font
@@ -18645,7 +18645,7 @@
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "987556c1-7695-4731-ae41-94cd1b45ccf3")

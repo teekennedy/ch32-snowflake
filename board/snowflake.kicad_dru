@@ -50,10 +50,25 @@
 	(constraint text_height (min 1mm))
 )
 
+# Stock KiCad / easyeda2kicad footprints keep silk ~0.10-0.12mm from pads.
+# JLCPCB clips silkscreen off exposed copper during CAM, and Gerbers are
+# plotted with "Subtract soldermask from silkscreen", so 0.09mm is enough to
+# catch real overlaps without flagging every library footprint.
 (rule "Pad to Silkscreen"
 	(layer outer)
 	(condition "A.Type == 'pad' && B.Layer == '?.Silkscreen'")
-	(constraint silk_clearance (min 0.15mm))
+	(constraint silk_clearance (min 0.09mm))
+)
+
+# Touch pad icons are intentionally printed on top of the pads. The pads have
+# no F.Mask opening, so the silk sits on soldermask over copper and is not
+# clipped at fab. Later rules take precedence, so this overrides the one above
+# only for items belonging to the TouchPad_* footprints.
+(rule "Touch pad artwork over pad"
+	(layer outer)
+	(condition "A.memberOfFootprint('snowflake:TouchPad_*') && B.memberOfFootprint('snowflake:TouchPad_*')")
+	(constraint silk_clearance (min 0mm))
+	(severity ignore)
 )
 
 (rule "Edge (routed) to track clearance"
