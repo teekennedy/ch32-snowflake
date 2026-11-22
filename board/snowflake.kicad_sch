@@ -12210,7 +12210,7 @@
 				)
 			)
 		)
-		(property "Value" "10uF"
+		(property "Value" "22uF"
 			(at 182.88 32.766 0)
 			(effects
 				(font
@@ -12218,7 +12218,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 184.4548 34.29 0)
 			(effects
 				(font
@@ -12245,7 +12245,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C15525"
+		(property "LCSC" "C45783"
 			(at 185.42 30.48 90)
 			(effects
 				(font
@@ -21841,7 +21841,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "easyeda2kicad:SOD-123_L2.6-W1.7-LS3.5-RD"
+		(property "Footprint" "Diode_SMD:Nexperia_CFP3_SOD-123W"
 			(at 54.61 24.13 0)
 			(effects
 				(font
