@@ -3724,7 +3724,7 @@
 		(path "/5dc5cc2b-bea4-445a-9ef1-87536fb711b6")
 		(sheetname "/")
 		(sheetfile "snowflake.kicad_sch")
-		(attr exclude_from_pos_files)
+		(attr exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -1.905 1.27)
 			(end -1.905 0.635)
