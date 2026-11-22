@@ -1341,7 +1341,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C54318710"
+		(property "LCSC" "C55214228"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -19143,7 +19143,7 @@
 		(path "/987556c1-7695-4731-ae41-94cd1b45ccf3")
 		(sheetname "/")
 		(sheetfile "snowflake.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_line
 			(start -4.47 1.85)
 			(end -3.21 1.85)
