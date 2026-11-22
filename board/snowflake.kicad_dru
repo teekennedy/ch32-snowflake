@@ -146,3 +146,13 @@
 	(constraint clearance (min 0.127mm))
 )
 
+
+# U25 (TPS61023, SOT-563) has 0.5mm pitch, leaving ~0.2mm between pads, so
+# anything routed to or poured around it can't hold the 0.2mm default. The
+# pads also carry 0.15mm local clearance overrides, but those are lost on
+# "Update Footprint from Library"; this rule keeps DRC passing regardless.
+# Rules are tested with A/B swapped, so this covers U25 pads vs. any item.
+(rule "TPS61023 fine pitch"
+	(condition "A.memberOfFootprint('U25')")
+	(constraint clearance (min 0.15mm))
+)

@@ -2417,7 +2417,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "easyeda2kicad:TPS61022RWUR"
+		(symbol "easyeda2kicad:TPS61023DRLR"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2429,7 +2429,7 @@
 					)
 				)
 			)
-			(property "Value" "TPS61022RWUR"
+			(property "Value" "TPS61023DRLR"
 				(at 0 -8.89 0)
 				(effects
 					(font
@@ -2437,7 +2437,7 @@
 					)
 				)
 			)
-			(property "Footprint" "easyeda2kicad:VQFN-7_L2.0-W2.0-P0.55-TL_RWU"
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-563"
 				(at 0 -11.43 0)
 				(effects
 					(font
@@ -2446,7 +2446,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://www.lcsc.com/datasheet/C915088.pdf"
+			(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps61023.pdf"
 				(at 0 -13.97 0)
 				(effects
 					(font
@@ -2455,7 +2455,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" ""
+			(property "Description" "3.7A Boost Converter, 0.5-5.5V input, 2.2-5.5V output, SOT-563"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2464,7 +2464,7 @@
 					(hide yes)
 				)
 			)
-			(property "Manufacturer" "TI(德州仪器)"
+			(property "Manufacturer" "Texas Instruments"
 				(at 0 -16.51 0)
 				(effects
 					(font
@@ -2473,7 +2473,7 @@
 					(hide yes)
 				)
 			)
-			(property "MPN" "TPS61022RWUR"
+			(property "MPN" "TPS61023DRLR"
 				(at 0 -19.05 0)
 				(effects
 					(font
@@ -2482,7 +2482,7 @@
 					(hide yes)
 				)
 			)
-			(property "LCSC Part" "C915088"
+			(property "LCSC Part" "C919459"
 				(at 0 -21.59 0)
 				(effects
 					(font
@@ -2500,7 +2500,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "TPS61022RWUR_0_1"
+			(symbol "TPS61023DRLR_0_1"
 				(rectangle
 					(start -8.89 6.35)
 					(end 8.89 -6.35)
@@ -2533,7 +2533,7 @@
 							)
 						)
 					)
-					(number "1"
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2551,7 +2551,7 @@
 							)
 						)
 					)
-					(number "2"
+					(number "5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2569,7 +2569,7 @@
 							)
 						)
 					)
-					(number "3"
+					(number "6"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2587,25 +2587,7 @@
 							)
 						)
 					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 11.43 1.27 180)
-					(length 2.54)
-					(name "MODE"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2623,7 +2605,7 @@
 							)
 						)
 					)
-					(number "5"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2641,7 +2623,7 @@
 							)
 						)
 					)
-					(number "4"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -6158,16 +6140,6 @@
 			(type default)
 		)
 		(uuid "843e9f57-245c-44f5-aaa3-ca99dadcf71d")
-	)
-	(wire
-		(pts
-			(xy 179.07 43.18) (xy 190.5 43.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8511bac7-453b-42b1-bfc5-269fac712dda")
 	)
 	(wire
 		(pts
@@ -12915,72 +12887,6 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 190.5 43.18 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0e530f29-8c33-4ef9-aafa-7467ada795dd")
-		(property "Reference" "#PWR082"
-			(at 190.5 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 190.5 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 190.5 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 190.5 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 190.5 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4d7adec3-48a4-433f-9fbb-f43479b1dbf9")
-		)
-		(instances
-			(project "snowflake"
-				(path "/40481058-4523-4575-8fee-da98fa47c16e"
-					(reference "#PWR082")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
 		(at 30.48 270.51 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -14314,7 +14220,7 @@
 		)
 	)
 	(symbol
-		(lib_id "easyeda2kicad:TPS61022RWUR")
+		(lib_id "easyeda2kicad:TPS61023DRLR")
 		(at 167.64 44.45 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -14331,7 +14237,7 @@
 				)
 			)
 		)
-		(property "Value" "TPS61022"
+		(property "Value" "TPS61023"
 			(at 167.64 35.56 0)
 			(effects
 				(font
@@ -14339,7 +14245,7 @@
 				)
 			)
 		)
-		(property "Footprint" "easyeda2kicad:VQFN-7_L2.0-W2.0-P0.55-TL_RWU"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-563"
 			(at 167.64 55.88 0)
 			(effects
 				(font
@@ -14348,7 +14254,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C915088.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps61023.pdf"
 			(at 167.64 69.85 0)
 			(effects
 				(font
@@ -14357,7 +14263,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "8A Boost Converter, 0.5-5.5 V input, 2.2-5.5V output, Texas RWU0007A VQFN-7"
+		(property "Description" "3.7A Boost Converter, 0.5-5.5V input, 2.2-5.5V output, SOT-563"
 			(at 167.64 44.45 0)
 			(effects
 				(font
@@ -14366,7 +14272,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C915088"
+		(property "LCSC" "C919459"
 			(at 167.64 44.45 0)
 			(effects
 				(font
@@ -14375,7 +14281,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C915088"
+		(property "LCSC Part" "C919459"
 			(at 167.64 58.42 0)
 			(effects
 				(font
@@ -14384,7 +14290,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "TI(德州仪器)"
+		(property "Manufacturer" "Texas Instruments"
 			(at 167.64 60.96 0)
 			(effects
 				(font
@@ -14393,7 +14299,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "TPS61022RWUR"
+		(property "MPN" "TPS61023DRLR"
 			(at 167.64 63.5 0)
 			(effects
 				(font
@@ -14402,25 +14308,22 @@
 				(hide yes)
 			)
 		)
-		(pin "5"
+		(pin "2"
 			(uuid "acaead65-335c-4ed6-87b8-7f33c6833a51")
 		)
-		(pin "6"
-			(uuid "db5661d2-1b3f-4300-b5b4-2d02d4279c68")
-		)
-		(pin "7"
+		(pin "3"
 			(uuid "cbe46c50-d202-4f1f-bf36-4e8a663ba012")
 		)
-		(pin "1"
+		(pin "4"
 			(uuid "60798a11-ac65-4e06-add0-8e877b6ca451")
 		)
-		(pin "2"
+		(pin "5"
 			(uuid "5f2152a6-ae98-4b32-bc04-f16a3fe03e0d")
 		)
-		(pin "3"
+		(pin "6"
 			(uuid "fda77e54-b222-4de4-9daf-6d86ecbee4d0")
 		)
-		(pin "4"
+		(pin "1"
 			(uuid "09594ebc-0e3d-4670-8ecb-7d9c981c8b67")
 		)
 		(instances
@@ -16195,7 +16098,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C54318710"
+		(property "LCSC" "C19077499"
 			(at 39.37 39.37 0)
 			(effects
 				(font
@@ -16978,7 +16881,7 @@
 				)
 			)
 		)
-		(property "Value" "732k"
+		(property "Value" "750k"
 			(at 135.89 45.974 90)
 			(effects
 				(font
@@ -17013,7 +16916,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C22961"
+		(property "LCSC" "C23240"
 			(at 135.89 48.26 90)
 			(effects
 				(font
@@ -18109,7 +18012,7 @@
 				)
 			)
 		)
-		(property "Value" "D_Schottky"
+		(property "Value" "B5817W"
 			(at 151.13 37.1475 0)
 			(effects
 				(font
@@ -18145,7 +18048,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C82288"
+		(property "LCSC" "C7420328"
 			(at 147.32 36.83 90)
 			(effects
 				(font
@@ -19956,7 +19859,7 @@
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "bba4765d-0b93-4516-9de9-4f5a12cf873b")
@@ -20852,7 +20755,7 @@
 				)
 			)
 		)
-		(property "Value" "D_Schottky"
+		(property "Value" "B5817W"
 			(at 53.6575 35.56 0)
 			(effects
 				(font
@@ -20888,7 +20791,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C82288"
+		(property "LCSC" "C7420328"
 			(at 53.34 39.37 0)
 			(effects
 				(font
@@ -21929,7 +21832,7 @@
 				)
 			)
 		)
-		(property "Value" "D_Schottky"
+		(property "Value" "PMEG2010ER"
 			(at 54.9275 20.32 0)
 			(effects
 				(font
