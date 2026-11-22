@@ -3864,196 +3864,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "snowflake:TC2030_WCH-LinkE"
-			(exclude_from_sim no)
-			(in_bom no)
-			(on_board yes)
-			(property "Reference" "J"
-				(at 2.54 11.43 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "TC2030_WCH-LinkE"
-				(at 2.54 8.89 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "Connector:Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical"
-				(at 0 -17.78 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://www.tag-connect.com/wp-content/uploads/bsk-pdf-manager/TC2030-CTX_1.pdf"
-				(at 0 -15.24 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Tag-Connect TC2030-NL footprint with a NON-STANDARD pinout for a WCH-LinkE (SWIO + UART). Not compatible with standard TC2030 ARM SWD cables. Signal directions are from the probe side."
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "Tag-Connect TC2030 WCH-LinkE SWIO UART CH32 debug"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "*TC2030*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "TC2030_WCH-LinkE_0_0"
-				(pin power_in line
-					(at -2.54 10.16 270)
-					(length 2.54)
-					(name "5V"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -2.54 -10.16 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at 7.62 5.08 180)
-					(length 2.54)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 7.62 2.54 180)
-					(length 2.54)
-					(name "SWIO"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 7.62 0 180)
-					(length 2.54)
-					(name "TX"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 7.62 -2.54 180)
-					(length 2.54)
-					(name "RX"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "TC2030_WCH-LinkE_0_1"
-				(rectangle
-					(start -5.08 7.62)
-					(end 5.08 -7.62)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 	)
 	(rectangle
 		(start 53.34 175.26)
@@ -4500,6 +4310,14 @@
 		(uuid "078f0f8a-b9b0-4797-bb32-8e4f81d5fdd9")
 	)
 	(no_connect
+		(at 93.98 250.19)
+		(uuid "1c7d53e3-f275-489f-a9e2-8f15a82281db")
+	)
+	(no_connect
+		(at 40.64 262.89)
+		(uuid "21bcd120-7175-4f4e-98b9-8c42dc109f44")
+	)
+	(no_connect
 		(at 63.5 34.29)
 		(uuid "48b55dff-63c6-4024-b1e7-2850aecc5bd5")
 	)
@@ -4510,6 +4328,10 @@
 	(no_connect
 		(at 76.2 262.89)
 		(uuid "5cccf33d-ca15-46c3-969e-c1eb746155fb")
+	)
+	(no_connect
+		(at 40.64 257.81)
+		(uuid "63e476d3-b64c-4f2d-9fa2-b3bdaaca4010")
 	)
 	(no_connect
 		(at 93.98 267.97)
@@ -4548,18 +4370,12 @@
 		(uuid "e905d705-2a28-48eb-ac02-8d601658003d")
 	)
 	(no_connect
+		(at 93.98 247.65)
+		(uuid "e9844963-7f10-40a0-81c3-71c98c8ca395")
+	)
+	(no_connect
 		(at 40.64 252.73)
 		(uuid "eff6f55d-08ff-4ccf-a35d-5f68b3c6dcae")
-	)
-	(wire
-		(pts
-			(xy 40.64 255.27) (xy 46.99 255.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "00585c2c-421b-4659-b486-56190213e709")
 	)
 	(wire
 		(pts
@@ -5010,16 +4826,6 @@
 			(type default)
 		)
 		(uuid "2b783516-fbb3-4a55-b03f-6593248954fb")
-	)
-	(wire
-		(pts
-			(xy 93.98 250.19) (xy 96.52 250.19)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2cd865a0-42ff-46c9-8c9f-fe420ce76103")
 	)
 	(wire
 		(pts
@@ -7023,16 +6829,6 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 247.65) (xy 96.52 247.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bdd48c67-9c4a-4046-8a7e-c6b8b91abefc")
-	)
-	(wire
-		(pts
 			(xy 281.94 90.17) (xy 281.94 91.44)
 		)
 		(stroke
@@ -7513,6 +7309,16 @@
 	)
 	(wire
 		(pts
+			(xy 40.64 260.35) (xy 46.99 260.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e53693f6-a2b1-4c61-970b-79fd3136b200")
+	)
+	(wire
+		(pts
 			(xy 76.2 257.81) (xy 74.93 257.81)
 		)
 		(stroke
@@ -7753,16 +7559,6 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 257.81) (xy 46.99 257.81)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f91a5f51-5576-4113-9ec2-4a44f8d56f48")
-	)
-	(wire
-		(pts
 			(xy 210.82 138.43) (xy 210.82 140.97)
 		)
 		(stroke
@@ -7790,16 +7586,6 @@
 			(type default)
 		)
 		(uuid "f9c55b39-9b1a-4599-ae07-e554056125b6")
-	)
-	(wire
-		(pts
-			(xy 40.64 260.35) (xy 46.99 260.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f9cd96a1-5922-4caa-96d2-fbaa8308ff80")
 	)
 	(wire
 		(pts
@@ -11982,16 +11768,6 @@
 		)
 		(uuid "076fd87a-fa06-4066-a64f-8314d097afb5")
 	)
-	(label "TX"
-		(at 96.52 247.65 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "0f9dc110-e9bd-43ed-87c3-187e814dde53")
-	)
 	(label "TOUCH2"
 		(at 134.62 265.43 0)
 		(effects
@@ -12072,16 +11848,6 @@
 		)
 		(uuid "54c212e9-9b17-4661-9fd4-537ce0f2f193")
 	)
-	(label "RX"
-		(at 46.99 260.35 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "5a3411ce-1bcb-427c-8404-0b4f2a978fe3")
-	)
 	(label "BAT+"
 		(at 48.26 17.78 270)
 		(effects
@@ -12122,18 +11888,8 @@
 		)
 		(uuid "b07d0258-94dd-4db0-b837-8ce722f40ce0")
 	)
-	(label "RX"
-		(at 96.52 250.19 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "b7625238-30b0-49c0-8460-f9fa5770d013")
-	)
 	(label "SWIO"
-		(at 46.99 255.27 180)
+		(at 46.99 260.35 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -12181,16 +11937,6 @@
 			(justify left bottom)
 		)
 		(uuid "e4572166-9f0a-4731-b4ec-009d0924cee1")
-	)
-	(label "TX"
-		(at 46.99 257.81 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "f1e1e238-8b9b-4fac-a438-5d1fd0770c52")
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -15889,7 +15635,7 @@
 		)
 	)
 	(symbol
-		(lib_id "snowflake:TC2030_WCH-LinkE")
+		(lib_id "Connector:Conn_ARM_SWD_TagConnect_TC2030-NL")
 		(at 33.02 257.81 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -15916,7 +15662,7 @@
 			)
 		)
 		(property "Footprint" "Connector:Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical"
-			(at 33.02 240.03 0)
+			(at 33.02 275.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15925,7 +15671,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.tag-connect.com/wp-content/uploads/bsk-pdf-manager/TC2030-CTX_1.pdf"
-			(at 33.02 242.57 0)
+			(at 33.02 273.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15933,7 +15679,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Tag-Connect TC2030-NL footprint with a NON-STANDARD pinout for a WCH-LinkE (SWIO + UART). Not compatible with standard TC2030 ARM SWD cables. Signal directions are from the probe side."
+		(property "Description" "Tag-Connect ARM Cortex SWD JTAG connector, 6 pin, no legs"
 			(at 33.02 257.81 0)
 			(effects
 				(font
