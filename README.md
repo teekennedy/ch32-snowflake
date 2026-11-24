@@ -45,6 +45,22 @@ How the panel is built:
 
 Generate the fabrication files from the panel, and choose "Panel by Customer" when ordering.
 
+## Silkscreen Art (Silk Router 30°)
+
+[board/tools/silk-router](./board/tools/silk-router/index.html) is a small browser tool for drawing trace-style silkscreen art that snaps to 30° angles (KiCad's router only does 45°).
+It loads the `.kicad_pcb` as a background and treats the board edge, holes, exposed pads and existing silkscreen as obstacles for walk-around routing.
+
+```sh
+cd board
+python3 -m http.server 8000   # then open http://localhost:8000/tools/silk-router/
+```
+
+Serving it this way auto-loads `snowflake.kicad_pcb`. Opening `index.html` directly also works; use "Load board…" in that case.
+Export either:
+
+- **SVG**: coordinates are in board millimetres. In KiCad use File → Import → Graphics, pick F.SilkS and place it at X 0, Y 0.
+- **.kicad_mod**: a footprint whose origin is the symmetry center (150, 150 by default). Place it at that position with rotation 0.
+
 ## Firmware
 
 In order to flash the firmware, you need to setup your build environment for [ch32fun](https://github.com/cnlohr/ch32fun).
